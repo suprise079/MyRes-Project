@@ -3,6 +3,38 @@ body {
     width: auto;
 }
 
+header{
+    background-color: #1c467d;
+
+    
+}
+
+li {
+    display: inline;
+    margin: 0em 1em 0em 1em;
+}
+
+img {
+    width: 115px;
+    height: 115px;
+    margin-top: 20px;
+}
+
+#logo {
+    width: 25%;
+    
+}
+
+#myRes {
+    width: 75%;
+    font-size: 50px;
+    display: inline;
+    color: #FFFFFF;
+    padding-left: 10px;
+    
+    
+}
+
 .left {
     width: 58%;
     margin: 10px 0px 10px 0px;
@@ -17,7 +49,7 @@ main {
 }
 
 #information {
-    background-color:green;
+    background-color: #FFFFFF;
     width: 58%;
    
 }
