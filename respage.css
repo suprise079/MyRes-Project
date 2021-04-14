@@ -1,0 +1,34 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+}
+
+.left {
+    width: 58%;
+    margin: 10px 0px 10px 0px;
+}
+
+section{
+    border: 1px solid black;
+}
+
+main {
+    background-color: gray;
+}
+
+#information {
+    background-color:green;
+    width: 58%;
+   
+}
+
+#resPictures {
+    background: blue;
+    width: 40%;
+    float: right;
+    
+}
+
+.imgs {
+    margin: 10px 0px 10px 0px;
+}
