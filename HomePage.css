@@ -1,0 +1,92 @@
+.header{
+    background-color: grey;
+    width: 85em;
+    height: 17em;
+    margin-left: 2px;
+    margin-right: 2px;
+   
+}
+.tab{
+    background-color: grey;
+    width: 85em;
+    height: 6em;
+    margin-top: 20px;
+}
+.logo{
+    float: left;
+    width: 60%;
+    height: 40%;
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.logo img{
+    width: 17em;
+    height: 15em;
+    border-radius: 4px;
+    padding: 2px;
+    
+
+}
+.Name{
+    float: right;
+    width: 60%;
+    height: 40%;
+    margin-top: -110px;
+    margin-bottom: 2px;
+    padding-left: 50px;
+
+}
+.Name img{
+    width: 63em;
+    height: 15em;
+    border-radius: 4px;
+    padding: 2px;
+    margin-left: -210px;
+    
+}
+.tab input{
+    float: left;
+    margin-left: 10px;
+    border: 1px solid black;
+    margin-top: 30px;
+    border-radius: 0px;
+    height: 30px;
+    width: 280px;
+
+}
+.tab button{
+  float: left;
+  width: 5%;
+  padding: 10px;
+  background: #1c467D;
+  margin-top: 30px;
+  height: 34px;
+  font-size: 17px;
+  border: 1px solid black;
+  border-left: none; 
+  cursor: pointer;
+
+    
+}
+.tab a{
+    text-decoration: none;
+    width: 10%;
+    margin-top: 30px;
+    border : 1px solid black;
+    text-align: center;
+
+}
+.contacts{
+    float: left ;
+    margin-left: 60px;
+
+}
+.about{
+    float: left;
+    margin-left: 80px;
+}
+.AddRes{
+    float: left;
+    margin-left: 100px;
+}
