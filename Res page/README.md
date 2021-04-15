@@ -1,2 +1,2 @@
-# MyRes
-DSW group assignment
+# Res Page
+This is the respage form folder
