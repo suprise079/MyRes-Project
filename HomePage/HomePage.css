@@ -1,7 +1,7 @@
 .header{
     background-color: grey;
     width: 85em;
-    height: 17em;
+    height: 15em;
     margin-left: 2px;
     margin-right: 2px;
    
@@ -9,7 +9,7 @@
 .tab{
     background-color: grey;
     width: 85em;
-    height: 6em;
+    height: 4em;
     margin-top: 20px;
 }
 .logo{
@@ -22,7 +22,7 @@
 }
 .logo img{
     width: 17em;
-    height: 15em;
+    height: 14em;
     border-radius: 4px;
     padding: 2px;
     
@@ -32,14 +32,14 @@
     float: right;
     width: 60%;
     height: 40%;
-    margin-top: -110px;
+    margin-top: -95px;
     margin-bottom: 2px;
     padding-left: 50px;
 
 }
 .Name img{
-    width: 63em;
-    height: 15em;
+    width: 60em;
+    height: 14em;
     border-radius: 4px;
     padding: 2px;
     margin-left: -210px;
@@ -49,7 +49,7 @@
     float: left;
     margin-left: 10px;
     border: 1px solid black;
-    margin-top: 30px;
+    margin-top: 18px;
     border-radius: 0px;
     height: 30px;
     width: 280px;
@@ -60,7 +60,7 @@
   width: 5%;
   padding: 10px;
   background: #1c467D;
-  margin-top: 30px;
+  margin-top: 18px;
   height: 34px;
   font-size: 17px;
   border: 1px solid black;
@@ -80,13 +80,29 @@
 .contacts{
     float: left ;
     margin-left: 60px;
-
+    background-color: #4980c9;
+    color: white;
+   
+}
+.tab .contacts{
+    margin-top: 22px;
 }
 .about{
     float: left;
     margin-left: 80px;
+    background-color: #4980c9;
+    color: white;
+    
+}
+.tab .about{
+    margin-top: 22px;
 }
 .AddRes{
     float: left;
     margin-left: 100px;
+    background-color: #4980c9;
+    color: white;
+}
+.tab .AddRes{
+    margin-top: 22px;
 }
