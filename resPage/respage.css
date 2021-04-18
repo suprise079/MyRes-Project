@@ -88,14 +88,14 @@ section {
 #reviews-container {
     background-color: #FFFFFF;
     max-width: 50%;
-    float: left; 
+    float: left;
 }
 
 #map {
     background-color: #FFFFFF;
-    max-width: 50%;
-    float: left; 
-    clear: right;
+    max-width: 49%;
+    float: left;
+    clear:right;
     margin-left: 5px;
 }
 
@@ -104,5 +104,6 @@ section {
     border: 1px solid black;  
     margin: 10px 0px 10px 0px; 
     background-color: #1c467d;
+    clear: left;
 }
 
