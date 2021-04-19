@@ -5,22 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
+    <!-- main CSS file for this page -->
     <link rel="stylesheet" href="HomePage\HomePage.css">
+    <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="HomePage\bootstrap\css\bootstrap.min.css">
+
 </head>
 <body id="body">
 
-    <div class = "header">
-        <div class = "logo"><img src="logo.jpeg" alt="MyResLogo"></div>
-        <div class = "Name"></div>
+    <!-- Cotainer for the logo -->
+    <div class="row header">
+        <img src="HomePage\media\logo.jpeg" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div id="resName" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">MyRes</div>
     </div>
 
-    <div class= "tab">
-        <input type="text" placeholder="Search">
-        <input type="image" src="HomePage\search.png" id="searchImage" />
-        <a class="contacts" href="">Contacts</a>
-        <a class="about" href="">About Us</a>
-        <a class="AddRes" href="resPage\respage.html">Add Res</a>
+    <div class= "tab row">
+        <input type="text" placeholder="Search" id="searchInput" class="col-lg-3 col-md-3 col-sm-9 col-xs-11">
+        <input type="image" src="HomePage\media\search.png" id="searchImage" class="col-lg-1 col-md-1 col-sm-2 col-xs-1"/>
+        <a href="" class="col-lg-2 col-md-2 col-sm-3 col-xs-3">Contacts</a>
+        <a href="" class="col-lg-2 col-md-2 col-sm-3 col-xs-3">About Us</a>
+        <a href="loginPage\loginpg.html" class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Add Res</a>
+        <a href="loginPage\loginpg.html"  class="col-lg-2 col-md-2 col-sm-3 col-xs-3" style="background-color: lightgreen;">Login</a>
    </div>
 
    <section id="filters">
@@ -91,24 +96,32 @@
     <section id="searchResults" class="row">
         <article class="col-lg-4 col-md-6 col-sm-12">
             <b>Display Res 1</b>
+            <br>
+            <a href="resPage\respage.html" class="viewButton">View Res</a>
         </article>
         <article class="col-lg-4 col-md-6 col-sm-12">
             <b>Display Res 2</b>
+            <br>
+            <a href="resPage\respage.html" class="viewButton">View Res</a>
         </article>
         <article class="col-lg-4 col-md-6 col-sm-12">
             <b>Display Res 3</b>
+            <br>
+            <a href="resPage\respage.html" class="viewButton">View Res</a>
         </article>
         <article class="col-lg-4 col-md-6 col-sm-12">
             <b>Display Res 4</b>
+            <br>
+            <a href="resPage\respage.html" class="viewButton">View Res</a>
         </article>
     </section>
 
     <hr>
 
     <section id="bestInDFC">
-        <img src="left.png" class="arrow">
+        <img src="HomePage\media\left.png" class="arrow">
         <div id="slideMage">Res Image</div>
-        <img src="right.png" class="arrow">
+        <img src="HomePage\media\right.png" class="arrow">
     </section>
 
    <div class="footer">
