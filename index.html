@@ -31,8 +31,8 @@
         <h3>Filters</h3>
 
         <h4>Location</h4>
-        <button class="locationButtons">By Town</button>
-        <button class="locationButtons">By Campus</button>
+        <button class="locationButtons" onclick="byTown()">By Town</button>
+        <button class="locationButtons" onclick="byCampus()">By Campus</button>
         <br>
         <!-- Location based on towns code -->
         <div id="towns" class="show">
@@ -62,22 +62,22 @@
                 <input type="radio" id="dfc" name="dfc" value="dfc">
                 <label for="dfc">DFC</label><br>
                 <input type="radio" id="apk" name="apk" value="apk">
-                <label for="apk">APK</label>
+                <label for="apk">APK</label><br>
                 <input type="radio" id="swc" name="swc" value="swc">
                 <label for="swc">SWC</label>
             </form>
         </div>
 
         <hr>
-
+        <!-- choose price filter -->
         <h4>Price Ranges</h4>
-        <input type="text" value="Minimum Price" id="minPrice" class="price">
-        <input type="text" value="Maximum Price" id="maxPrice" class="price">
+        <input type="text" value="Minimum Price" id="minPrice" class="price" onmousedown="minPrice()">
+        <input type="text" value="Maximum Price" id="maxPrice" class="price" onmousedown="maxPrice()">
         <br>
-        <input type="range" min="100" max="10000" value="5000" id="priceRange">
+        <input type="range" min="100" max="10000" value="5000" id="priceRange" oninput="rangeInput()">
 
         <hr>
-
+        <!-- Choosing the prefferd number of rooms -->
         <h4>Rooms</h4>
         <input type="checkbox" id="single">
         <label for="single">Single</label>
@@ -90,23 +90,27 @@
         <br>
 
         <hr>
-
+        <!-- Options to choose to choose acoording to rating -->
         <h4>Ratings</h4>
-        <input type="checkbox" id="5star">
-        <label for="5star">&#9733 &#9733 &#9733 &#9733 &#9733</label>
-        <br>
-        <input type="checkbox" id="4star">
-        <label for="4star">&#9733 &#9733 &#9733 &#9733</label>
-        <br>
-        <input type="checkbox" id="3star">
-        <label for="3star">&#9733 &#9733 &#9733</label>
-        <br>
-        <input type="checkbox" id="1star">
-        <label for="1star">&#9733</label>
-        <br>
+        <!-- change -->
+        <form method="" action="">
+            <input type="checkbox" id="5star">
+            <label for="5star">&#9733 &#9733 &#9733 &#9733 &#9733</label>
+            <br>
+            <input type="checkbox" id="4star">
+            <label for="4star">&#9733 &#9733 &#9733 &#9733</label>
+            <br>
+            <input type="checkbox" id="3star">
+            <label for="3star">&#9733 &#9733 &#9733</label>
+            <br>
+            <input type="checkbox" id="1star">
+            <label for="1star">&#9733</label>
+        </form>
     </section>
 
+    <!-- container to display reses -->
     <section id="searchResults" class="row">
+        <!-- Each article show one res -->
         <article class="col-lg-4 col-md-6 col-sm-12">
             <b>Display Res 1</b>
             <br>
@@ -131,12 +135,15 @@
 
     <hr>
 
+    <!-- sling images -->
     <section id="bestInDFC">
         <img src="HomePage\media\left.png" class="arrow">
         <div id="slideMage">Res Image</div>
         <img src="HomePage\media\right.png" class="arrow">
     </section>
     <br>
+
+    <!-- footer information -->
  <footer>
        <input type="image" src="Icons\email.png" width = "30px" height = "30px" class=".col-xs-1" /></P>
        <input type="image" src="Icons\telephone.png" width = "30px" height = "30px" class="tel" /></P>
@@ -154,5 +161,6 @@
        <P class="copyrights"><img src="Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >2021 MyRes. All Rights Reserved </P>
   </footer>
 
+<script type="text/javascript" src="javaScript_files\homePage.js"></script>
 </body>
 </html>
