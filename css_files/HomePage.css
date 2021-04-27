@@ -209,7 +209,7 @@ h4 {
 }
 
 /*Container for the sliding image*/
-#bestInDFC {
+.ReslideShow {
     max-width: 100%;
     justify-content: center;
     align-items: center;
