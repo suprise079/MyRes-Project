@@ -28,22 +28,22 @@
 
         <div id="res-pictures" class="row"> 
 
-            <section id="streetview" class="imgs col-md-4" onclick="">
+            <section id="streetview" class="imgs col-md-4, enlarge" >
                 <p>street view</p>
             </section>
-            <section id="img1" class="imgs col-md-4" onclick="">
+            <section id="img1" class="imgs col-md-4, enlarge">
                 <p>image 1</p>
             </section>
-            <section id="img2" class="imgs col-md-4" onclick="">
+            <section id="img2" class="imgs col-md-4, enlarge">
                 <p>image 2</p>
             </section>
-            <section id="img3" class="imgs col-md-4" onclick="">
+            <section id="img3" class="imgs col-md-4, enlarge">
                 <p>image 3</p>
             </section>
-			<section id="img4" class="imgs col-md-4" onclick="">
+			<section id="img4" class="imgs col-md-4, enlarge">
                 <p>image 4</p>
             </section>
-            <section id="img5" class="imgs col-md-4" onclick="">
+            <section id="img5" class="imgs col-md-4, enlarge">
                 <p>image 5</p>
             </section>
 
@@ -88,23 +88,18 @@
 					<hr>
 					<form id="reviewForm" name="addReview">
 
-						<label for="">Enter name</label><br>
+						<label>Enter name</label><br>
 						<input type="text" id="name" name="name"><br><br>
-						<label for="">Enter rating</label><br>
-                        
-		                <span id="1" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>	
-		                <span id="2" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
-		                <span id="3" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
-		                <span id="4" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
-		                <span id="5" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>							
-		                <br><br><br><br>
 
-						<label for="">Enter email</label><br>
-						<input type="text" id="email" name="email"><br><br>
-						<label for="">Enter resident review</label><br>
-						<input type="text" id="revDes" name="revDescription"><br><br>
+						<label>Enter rating</label><br>
+
+						<label>Enter email</label><br>
+						<input type="text" id="email"><br><br>
+
+						<label>Enter resident review</label><br>
+						<input type="text" id="revDes" ><br><br>
 						
-						<button id="send" type="submit" value="Send" name="reviewSubmit"> Submit </button>
+						<button id="send" type="submit" value="Send"> Submit </button>
 			
 					</form>
 
@@ -119,9 +114,12 @@
 
 		
 
-        <!--Map-->
-        <div id="map"> 
-            <p>map</p>   
+        <!--Map container-->
+        <div id="map-container"> 
+
+            <!--Map-->
+            map
+            
         </div>
            
        

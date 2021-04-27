@@ -1,4 +1,3 @@
-/*Commit to Respage*/
 body {
     font-family: sans-serif;
     width: auto;
@@ -9,6 +8,25 @@ body {
 main {
     margin: 10px 0px 10px 0px;
     padding: 0px 10px 0px 10px;
+    max-width: 100%;
+}
+
+#res-description {
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    float: left;
+    width: 650px;
+    height: auto;
+    max-width: 50%;
+}
+
+/*Res pictures properties*/
+#res-pictures {
+    margin: 10px 0px 10px 5px;
+    float: left;
+    clear: right;
+    width: 650px;
+    max-width: 50%;
 }
 
 section {
@@ -22,34 +40,25 @@ section {
     clear: right;
 }
 
-#res-description {
-    margin: 10px 0px 10px 0px;
-    padding: 0px 10px 0px 10px;
-    float: left;
-    width: 650px;
-    height: auto;
-    max-width: 50%;
+.enlarge:hover {
+    transform: scale(1.5);
+    transition: 2.0s;
 }
 
-#res-pictures {
-    margin: 10px 0px 10px 5px;
-    float: left;
-    clear: right;
-    width: 650px;
-    max-width: 50%;
-}
 
-#ratings {
-        clear: left;
-        margin: 10px 0px 10px 0px; 
-        padding: 0px 10px 0px 10px;
-}
-
-#writeReview-submit {
-    display: block;
-}
 
 /*Reviews + Ratings*/
+
+
+/*Star rating properties*/
+
+/*Average rating container properties */
+#avg-ratings {
+    height: fit-content;
+    max-width: 100%;
+    clear: both;
+}
+
 #Stars{
         margin: 5px 5px 0px 5px;
         padding-right: 30px;
@@ -98,15 +107,6 @@ section {
     color: #c59b08;
 }
 
-#avg-ratings {
-    height: fit-content;
-    max-width: 100%;
-    clear: both;
-}
-
-#avg-num {
-    justify-content: center;
-}
 
 button {
     padding: 10px;
@@ -131,12 +131,19 @@ button:hover {
     padding: 0px 10px 0px 10px;
 }
 
+
+/*Review form properties */
 .form {
     display: none;
 }
 
 .show {
-    display: inline-block;
+    background-color: #FFFFFF;
+    display: block;
+   
+}
+#reviewForm {
+    margin: auto;
 }
 
 #revDes {
@@ -144,16 +151,21 @@ button:hover {
     height: 100px;
 }
 
-#map {
+
+
+/*Map container properties*/
+#map-container {
+    background-color: #FFFFFF;
     width: 650px;
-    height: 320px;
-    max-width: 49%;
+    height: 400px;
+    max-width: 50%;
     float: left;
-    clear:right;
+    clear: right;
     margin: 10px 0px 10px 5px; 
     padding: 0px 10px 0px 10px;
         
 }
+
 
 /* border: 1px solid black; */
 
