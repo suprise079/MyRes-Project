@@ -1,71 +1,104 @@
-/*Commit to Respage*/
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     width: auto;
-    background-color: #e1dad8;
+    background-color: #E1DAD8;
 }
 
 /*Main section*/
-.imgs {  
-    border: 2px solid white;  
+main {
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    max-width: 100%;
 }
 
-#res-pictures {
-    margin: 5px;
+#res-description {
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
     float: left;
+    width: 650px;
+    height: auto;
     max-width: 50%;
-    clear: right;  
+}
+
+/*Res pictures properties*/
+#res-pictures {
+    margin: 10px 0px 10px 5px;
+    float: left;
+    clear: right;
+    width: 650px;
+    max-width: 50%;
 }
 
 section {
     border: 1px solid black;
-}
-
-#res-description {
     background-color: #FFFFFF;
+    margin: 5px;
+    width: 300px;
+    height: 300px;
     max-width: 50%;
-    float: left;   
+    float: left;
+    clear: right;
 }
 
-#ratings {
-    clear: left;
+.enlarge:hover {
+    transform: scale(1.5);
+    transition: 2.0s;
 }
+
+
 
 /*Reviews + Ratings*/
+
+
+/*Star rating properties*/
+
+/*Average rating container properties */
+#avg-ratings {
+    height: fit-content;
+    max-width: 100%;
+    clear: both;
+}
+
 #Stars{
-    margin: 5px;
-    padding-right: 30px;
-   
+        margin: 5px 5px 0px 5px;
+        padding-right: 30px;
 }
+
 .rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-    
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+
 }
+
 .rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+        position:absolute;
+        top:-9999px;
 }
+
 .rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
+
 .rate > input:checked ~ label {
     color: #ffc700;    
 }
+
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
     color: #deb217;  
 }
+
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
@@ -74,36 +107,66 @@ section {
     color: #c59b08;
 }
 
-#ratings p {
-    padding: 2px;
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #7ed956;
+    color: #FFFFFF;
+    opacity: 1;
+    transition: 0.3s;
 }
 
-#reviews-header {
+button:hover {
     background-color: #1c467d;
-}
-#reviews-header h2 {
-    justify-content: center;
+    opacity: 0.6;
 }
 
 #reviews-container {
-    background-color: #FFFFFF;
+    width: 650px;
     max-width: 50%;
     float: left;
-}
-
-#map {
-    background-color: #FFFFFF;
-    max-width: 49%;
-    float: left;
-    clear:right;
-    margin-left: 5px;
-}
-
-/*Footer*/
-#footer {
-    border: 1px solid black;  
-    margin: 10px 0px 10px 0px; 
-    background-color: #1c467d;
     clear: left;
+    margin: 10px 0px 10px 0px; 
+    padding: 0px 10px 0px 10px;
 }
+
+
+/*Review form properties */
+.form {
+    display: none;
+}
+
+.show {
+    background-color: #FFFFFF;
+    display: block;
+   
+}
+#reviewForm {
+    margin: auto;
+}
+
+#revDes {
+    width: 320px;
+    height: 100px;
+}
+
+
+
+/*Map container properties*/
+#map-container {
+    background-color: #FFFFFF;
+    width: 650px;
+    height: 400px;
+    max-width: 50%;
+    float: left;
+    clear: right;
+    margin: 10px 0px 10px 5px; 
+    padding: 0px 10px 0px 10px;
+        
+}
+
+
+/* border: 1px solid black; */
+
 
