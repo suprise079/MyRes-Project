@@ -1,2 +1,0 @@
-# MyRes
-DSW group assignment
