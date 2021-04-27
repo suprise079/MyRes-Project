@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+#body {
+    background-color: #E1DAD8;
+
+}
+
+header {
+    background-color: #1c467D;
+    max-width: 100%;
+}
+
+#logoImg {
+    max-width: 15%;
+    border-radius: 50%;
+}
+
+#resName {
+    font-size: 18pt;
+    color: white;
+}
+
+#searchRes {
+    width: 200px;
+    border-radius: 20px;
+}
+
+#searchSymbol {
+    width: 20px;
+}
+
+header a {
+    background-color: #5bccf6;
+    color: black;
+    border-radius: 10px;
+    padding: 2px 10px 2px 10px;
+    text-decoration: none;
+}
+
+#loginButton {
+    background-color: #7ED956;
+    border-radius: 10px;
+    padding: 2px 10px 2px 10px;
+    border: none;
+}
+
+.tab{
+    position: relative;
+    width: 100%;
+    left: 10px;
+    margin-top: 0px;
+    
+    width: 100%;
+    min-height: 4em;
+    max-height: 10em;
+    padding-left: 10px;
+}
+
+.tab input {
+    height: 25px;
+    margin-top: 0.8%;
+}
+
+
+#searchImage {
+    background-color: #1c467D;
+    height: 25px;
+    border: 1px solid black;
+    border-left: none; 
+    cursor: pointer;
+    image-rendering:auto;
+}
+
+.tab a{
+    margin-top: 0%;
+    text-decoration: none;
+    border : 8px solid #E1DAD8;
+    text-align: center;
+    background-color: #5bccf6;
+    
+    height: 40px;
+    color: black;
+
+}
+
+#searchResults {
+    max-width: 80%;
+    min-height: 200px;
+    justify-content: center;
+    
+}
+
+/* Boxes that display each res*/
+article {
+    justify-content: center;
+    height: 200px;
+    border: 10px solid  #E1DAD8;
+    margin: 0px;
+    background-color: #1c467D;
+    float: left;
+}
+
+/*for positioning text inside the res boxes*/
+b {
+    color: white;
+    position: relative;
+    left: 30%;
+    top: 40%;
+}
+
+/*Button to view more about res*/
+.viewButton {
+    text-decoration: none;
+    text-align: center;
+    background-color: #5bccf6;
+    border-radius: 10px;
+    padding: 3px;
+    color: black;
+    position: relative;
+    left: 30%;
+    top: 42%;
+    box-shadow: 2px 5px 4px;
+}
+
+.viewButton:hover {
+    background-color: red;
+    transition: 2s;
+}
+
+/*Positioning the filter box*/
+#filters {
+    min-width: 5%;
+    background-color: #7ED956;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+}
+
+
+/*filter heading*/
+h3 {
+    text-align: center;
+    background-color: #1c467D;
+    color: white;
+    padding: 2px;
+}
+
+/*Sub headings inn the filter box*/
+h4 {
+    color: black
+}
+
+/*Styling the two buttons under location filter*/
+.locationButtons {
+    background-color: #26A4EB;
+    margin: 5px;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 2px 5px 4px;
+}
+
+#towns {
+    display: none;
+}
+
+#campuses {
+    display: none;
+}
+
+/*min and max input boxes*/
+.price {
+    width: 150px;
+}
+
+#priceRange {
+    width: 250px;
+}
+
+#logo {
+    position: relative;
+    right: -500px;
+    top: -30px;
+    width: 10%;
+}
+
+/*aligning the sliding image, will remove with javascript*/
+#slideMage {
+    width: 25%;
+    height: 25%;
+    justify-content: center;
+    height: 200px;
+    margin: 10px;
+    background-color: #307297;
+    float: left;
+}
+
+
+/*arrows surrounding the the sliding image*/
+.arrow {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    size: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 5%;
+}
+
+/*Container for the sliding image*/
+#bestInDFC {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    clear: right;
+}
+
+
+footer{
+    float: left;
+    background-color: #1c467D;
+    margin-top: 200px;
+    clear: both;
+    width:100%;
+    height: 200px;
+    margin-bottom: 0%;
+    padding-top: 15px;
+   
+}
+.emailicons{
+    margin-left: 300px;
+    margin-bottom: -171px;
+   
+
+}
+.tel{
+    margin-left: 740px;
+    margin-bottom: -130px;
+}
+.insta{
+    margin-left: 620px;
+    margin-bottom: -92px;
+   
+
+}
+.twitter{
+    margin-left: 680px;
+    margin-bottom: -52px;
+
+}
+.links{
+    margin-left: 460px;   
+}
+.links a{
+    color:black;
+}
+.copyrights{
+    margin-left:499px ;
+    
+}
+.youtube{
+    margin-left: 565px;
+    
+}
