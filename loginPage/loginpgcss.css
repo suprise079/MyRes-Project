@@ -214,3 +214,57 @@ main{
     transform: scale(1.1);
 }
     
+
+.show-btn{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+    background-color: gray;
+}
+
+input[type = "checkbox"]{
+    display: none;
+}
+
+#show:checked ~ .logincontainer{
+    display: block;
+
+}
+
+.logincontainer{
+    display: none ;
+    width: 350 px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #e1dad8;
+    border: 1px solid black;
+
+}
+
+.logincontainer{
+    position: absolute;
+    top : 60%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logincontainer .close-btn{
+    position: absolute;
+    right: 20px;
+    top : 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#loginheading{
+    color: #1c467D;
+    font-size: 30px;
+    margin: 0 0 30px;
+    font-family: 'Lobster', cursive;
+
+
+}
+
+
