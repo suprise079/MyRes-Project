@@ -161,12 +161,12 @@ h4 {
     box-shadow: 2px 5px 4px;
 }
 
-#towns {
+.hide {
     display: none;
 }
 
-#campuses {
-    display: none;
+.show {
+    display: all;
 }
 
 /*min and max input boxes*/
