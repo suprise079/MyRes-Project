@@ -13,7 +13,10 @@ var send = document.getElementById('send');
 function change(){
     console.log(form);
     form.className = "show";
-    console.log("showing")
+}
+
+function enlargeMap(){
+
 }
 
 
