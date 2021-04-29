@@ -161,6 +161,11 @@ h4 {
     box-shadow: 2px 5px 4px;
 }
 
+.locationButtons:hover {
+    background-color: white;
+    transition: 2s;
+}
+
 .hide {
     display: none;
 }
@@ -171,7 +176,7 @@ h4 {
 
 /*min and max input boxes*/
 .price {
-    width: 150px;
+    width: 120px;
 }
 
 #priceRange {
@@ -209,7 +214,7 @@ h4 {
 }
 
 /*Container for the sliding image*/
-#bestInDFC {
+.ReslideShow {
     max-width: 100%;
     justify-content: center;
     align-items: center;
