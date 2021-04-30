@@ -13,15 +13,21 @@
 </head>
 <body id="body">
 
-    <header>
-       <img src="pictures\logoNew.jpeg" id="logoImg">
-       <span id="resName">MyRes</span>
-       <input type="text" id="searchRes">
-       <img src="pictures\search.png" id="searchSymbol">
-       <a href="">Contacts</a>
-       <a href="">About us</a>
-       <a href="">Add Res</a>
-       <button id="loginButton">Login</button>
+    <header class="row">
+        <!-- Added div to align logo with 12 grid system -->
+        <div class="col-lg-3">
+           <img src="pictures\logoNew.jpeg" id="logoImg"> 
+           <span id="resName">MyRes</span>
+       </div>
+       <input type="text" id="searchRes" class="col-lg-1">
+       <img src="pictures\search.png" id="searchSymbol" class="col-lg-1">
+       <!-- Added div to all links with 12 grid system -->
+       <div class="row col-lg-6">
+           <a href="" class="col-lg-3">Contacts</a>
+           <a href="" class="col-lg-3">About us</a>
+           <a href="" class="col-lg-3">Add Res</a>
+           <button id="loginButton" class="col-lg-3">Login</button>
+       </div>
     </header>
 
     
