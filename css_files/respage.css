@@ -140,8 +140,15 @@ button:hover {
     display: block;
    
 }
+
 #reviewForm {
-    margin: auto;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+input,textarea {
+    background-color: #E1DAD8;
+    border-radius: 5px;
 }
 
 #revDes {
@@ -152,7 +159,7 @@ button:hover {
 
 
 /*Map container properties*/
-#map-container {
+#mapContainer {
     background-color: #FFFFFF;
     width: 650px;
     height: 400px;
@@ -163,6 +170,33 @@ button:hover {
     padding: 0px 10px 0px 10px;
         
 }
+
+
+/* Map enlarge div */
+.enlarge {
+    transform: scale(1.5);
+}
+
+
+
+/* The Close Button */
+#close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  #close:hover,
+  #close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
 
 /* border: 1px solid black; */

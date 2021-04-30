@@ -7,12 +7,24 @@
     
     <title>Res Page</title>
 	<link rel="stylesheet" type="text/css" href="../css_files/respage.css">
+    <link rel="stylesheet" href="..\css_files\HomePage.css">
 	<!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="../css_files/bootstrap_css/bootstrap-grid.min.css">
 
 
 </head>
 <body>
+
+    <header>
+        <img src="..\pictures\logoNew.jpeg" id="logoImg">
+        <span id="resName">MyRes</span>
+        <input type="text" id="searchRes">
+        <img src="..\pictures\search.png" id="searchSymbol">
+        <a href="">Contacts</a>
+        <a href="">About us</a>
+        <a href="">Add Res</a>
+        <button id="loginButton">Login</button>
+     </header>
 
     <main id="main-container"> 
         
@@ -56,15 +68,15 @@
             <!--Average rating-->
             <!--Stars-->
             <div id="Stars" class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
+                <input type="radio" id="star5" name="rate" value="5"/>
                 <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
+                <input type="radio" id="star4" name="rate" value="4"/>
                 <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
+                <input type="radio" id="star3" name="rate" value="3"/>
                 <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
+                <input type="radio" id="star2" name="rate" value="2"/>
                 <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
+                <input type="radio" id="star1" name="rate" value="1"/>
                 <label for="star1" title="text">1 star</label>
             </div> 
  
@@ -96,7 +108,7 @@
 						<input type="text" id="email"><br><br>
 
 						<label>Enter resident review</label><br>
-						<input type="text" id="revDes" ><br><br>
+						<textarea rows = "5" cols = "60" name = "resDescription" id="revDes"> </textarea> <br><br>
 						
 
                         <!--Review Submit button-->
@@ -118,12 +130,16 @@
 		
 
         <!--Map container-->
-        <div id="map-container" onclick="enlargeMap()"> 
+        <div id="mapContainer" onclick="enlargeMap()"> 
 
             <!--Map-->
             map
             
         </div>
+        
+        <!-- <div id="mapEnlarge">
+            <span id="close">x</span>
+        </div> -->
            
        
     </main>
