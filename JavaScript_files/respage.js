@@ -20,6 +20,27 @@ function enlargeMap(){
 
 }
 
+//onclick enlarge images
+//sections, pictures, soon as the pictures are to be inserted
+function change1(){
+    document.getElementById('streetview');
+}
+function change2(){
+    document.getElementById('img1');
+}
+function change3(){
+    document.getElementById('img2');
+}
+function change4(){
+    document.getElementById('img3');
+}
+function change5(){
+    document.getElementById('img4'); 
+}
+function change5(){
+    document.getElementById('img5'); 
+}
+
 window.onload = function() { // add window.onload here and set it euqal to a function
     // Get the modal
     var enlarge = document.getElementById('mapEnlarge');
