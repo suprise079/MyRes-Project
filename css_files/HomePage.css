@@ -8,12 +8,15 @@
 }
 
 header {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
     background-color: #1c467D;
     max-width: 100%;
 }
 
 #logoImg {
-    max-width: 15%;
+    width: 100px;
     border-radius: 50%;
 }
 
@@ -24,26 +27,30 @@ header {
 
 #searchRes {
     width: 200px;
-    border-radius: 20px;
+    height: 35px;
+    border-radius: 15px;
 }
 
 #searchSymbol {
-    width: 20px;
+    width: 50px;
 }
 
 header a {
+    border: 10px solid #1c467D;
     background-color: #5bccf6;
     color: black;
-    border-radius: 10px;
-    padding: 2px 10px 2px 10px;
+    border-radius: 20px;
     text-decoration: none;
+    height: 50px;
 }
 
 #loginButton {
     background-color: #7ED956;
     border-radius: 10px;
-    padding: 2px 10px 2px 10px;
-    border: none;
+    border: 10px solid #1c467D;
+    height: 50px;
+    border-radius: 20px;
+    
 }
 
 .tab{
