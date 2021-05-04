@@ -114,29 +114,25 @@
         </form>
     </section>
 
-    <!-- container to display reses -->
+    <!-- section for displaying all reses using 12-grid bootstrap -->
     <section id="searchResults" class="row">
-        <!-- Each article show one res -->
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <b>Display Res 1</b>
-            <br>
-            <a href="..\html_files\respage.html" class="viewButton">View Res</a>
-        </article>
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <b>Display Res 2</b>
-            <br>
-            <a href="..\html_files\respage.html" class="viewButton">View Res</a>
-        </article>
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <b>Display Res 3</b>
-            <br>
-            <a href="..\html_files\respage.html" class="viewButton">View Res</a>
-        </article>
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <b>Display Res 4</b>
-            <br>
-            <a href="..\html_files\respage.html" class="viewButton">View Res</a>
-        </article>
+         <!-- Import res database -->
+      <?php include 'database\reses_information.php'; ?>
+      <!-- Looping through all reses found on database that match filter -->
+      <?php for ($i=0; $i < 6; $i++) {  ?>
+
+        <!-- Container for each res displayed -->
+       <article class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+         <table>
+            <?php $photo = "src=".$photos[0];?>
+            <tr><img <?php echo $photo; ?> alt="ResPicture" id="displayPic"></tr><br> <!-- Picture of specific res -->
+            <tr><?php echo $res_name[0]; ?> </tr><br> <!-- Name of res -->
+            <tr><?php echo $sharing[0] ?></tr><br>  <!-- Number of sharing -->
+            <tr><?php echo $location[0] ?></tr><br>  <!-- Location of the res -->
+         </table>
+       </article>
+      <?php  }?>
+        
     </section>
 
     <hr>

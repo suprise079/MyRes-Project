@@ -102,11 +102,23 @@ header a {
 /* Boxes that display each res*/
 article {
     justify-content: center;
-    height: 200px;
+    max-height: 50%;
     border: 10px solid  #E1DAD8;
     margin: 0px;
     background-color: #1c467D;
     float: left;
+}
+
+/*Picture displayed per res*/
+#displayPic {
+    visibility: none;
+    width: 20px;
+    height: 400px;
+}
+
+/*styling for rows inside article that display reses*/
+tr {
+    width: 100%;
 }
 
 /*for positioning text inside the res boxes*/
