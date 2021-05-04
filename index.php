@@ -13,15 +13,21 @@
 </head>
 <body id="body">
 
-    <header>
-       <img src="pictures\logoNew.jpeg" id="logoImg">
-       <span id="resName">MyRes</span>
-       <input type="text" id="searchRes">
-       <img src="pictures\search.png" id="searchSymbol">
-       <a href="">Contacts</a>
-       <a href="">About us</a>
-       <a href="">Add Res</a>
-       <button id="loginButton">Login</button>
+    <header class="row">
+        <!-- Added div to align logo with 12 grid system -->
+        <div class="col-lg-3">
+           <img src="pictures\logoNew.jpeg" id="logoImg"> 
+           <span id="resName">MyRes</span>
+       </div>
+       <input type="text" id="searchRes" class="col-lg-1">
+       <img src="pictures\search.png" id="searchSymbol" class="col-lg-1">
+       <!-- Added div to all links with 12 grid system -->
+       <div class="row col-lg-6">
+           <a href="" class="col-lg-3">Contacts</a>
+           <a href="" class="col-lg-3">About us</a>
+           <a href="" class="col-lg-3">Add Res</a>
+           <button id="loginButton" class="col-lg-3">Login</button>
+       </div>
     </header>
 
     
@@ -134,57 +140,51 @@
     </section>
 
     <hr>
-
+     <!--The Res SlideShow Pictures-->
     <div class ="ReSlideShow">
 
         <div class="Res">
-            <div class="number">1 / 3</div>
-            <img src="pictures\kingsway place.jpg" style="width:100%">
+            <div class="number fades">1 / 3</div>
+            <img src="pictures\kingsway place.jpg" width = 100%>
             <div class="caption">Caption Text</div>
           </div>
         
           <div class="Res">
-            <div class="number">2 / 3</div>
-            <img src="pictures\richmondRooms.jpg" style="width:100%">
+            <div class="number fades">2 / 3</div>
+            <img src="pictures\richmondRooms.jpg"  width = 100%>
             <div class="caption">Caption Two</div>
           </div>
         
           <div class="Res">
-            <div class="number">3 / 3</div>
-            <img src="pictures\studyRoom.jpg" style="width:100%">
+            <div class="number fades">3 / 3</div>
+            <img src="pictures\studyRoom.jpg" width = 100% >
             <div class="caption">Caption Three</div>
           </div>
 
           <a class="before" onclick="plusSlides(-1)">&#10094;</a>
           <a class="after" onclick="plusSlides(1)">&#10095;</a>
 
-        </div>
+         </div>
 
         <br>
 
         <div decoration = "text-align:center">
-            <span class="dot1" onclick="currentSlide(1)"></span>
-            <span class="dot2" onclick="currentSlide(2)"></span>
-            <span class="dot3" onclick="currentSlide(3)"></span>
+            <span class="bullet" onclick="currentSlide(1)"></span>
+            <span class="bullet" onclick="currentSlide(2)"></span>
+            <span class="bullet" onclick="currentSlide(3)"></span>
           </div>
 
 
-
+    
         
 
 
     </div>
-    <!-- sling images -->
-    <section id="bestInDFC">
-        <img src="HomePage\media\left.png" class="arrow">
-        <div id="slideMage">Res Image</div>
-        <img src="HomePage\media\right.png" class="arrow">
-    </section>
-    <br>
+    
 
     <!-- footer information -->
  <footer>
-       <input type="image" src="Icons\email.png" width = "30px" height = "30px" class=".col-xs-1" /></P>
+       <input type="image" src="Icons\email.png" width = "30px" height = "30px" class="emailicons" /></P>
        <input type="image" src="Icons\telephone.png" width = "30px" height = "30px" class="tel" /></P>
        <input type="image" src="Icons\insta.png" width = "30px" height = "30px"class="insta" /></P>
        <input type="image" src="Icons\twitter.png" width = "30px" height = "30px" class="twitter" /></P>
@@ -201,5 +201,7 @@
   </footer>
 
 <script type="text/javascript" src="javaScript_files\homePage.js"></script>
+<script type="text/javascript" src="JavaScript_files\index_slide.js"></script>
+
 </body>
 </html>
