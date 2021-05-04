@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Res Page</title>
-    <!-- Res Page css-->
 	<link rel="stylesheet" type="text/css" href="../css_files/respage.css">
-
 	<!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="../css_files/bootstrap_css/bootstrap-grid.min.css">
 
@@ -21,7 +19,7 @@
         <div id="res-description">
             
 	    <h2> $resName </h2>
-	    <span> $adress </span> <span> $email </span>
+	    <span> $address </span> <span> $email </span>
 	    <br><h3> Res Description </h3>
 	    <p> $resDescription </p>
 
@@ -29,26 +27,48 @@
 
 
         <div id="res-pictures" class="row"> 
+            
+            
+            <section id="streetview" class="imgs col-md-4, enlarge" >
+                <p>street view</p>
+            </section>
+            <section id="img1" class="imgs col-md-4, enlarge">
+                <p>image 1</p>
+            </section>
+            <section id="img2" class="imgs col-md-4, enlarge">
+                <p>image 2</p>
+            </section>
+            <section id="img3" class="imgs col-md-4, enlarge">
+                <p>image 3</p>
+            </section>
+			<section id="img4" class="imgs col-md-4, enlarge">
+                <p>image 4</p>
+            </section>
+            <section id="img5" class="imgs col-md-4, enlarge" >
+                <p>image 5</p>
+            </section>
+            <div class="container">
 
-           
+
         </div>
 
 
         <!--Ratings + Reviews-->
-        <div id="avg-ratings"> 
+
+         <div id="avg-ratings"> 
 
             <!--Average rating-->
             <!--Stars-->
             <div id="Stars" class="rate">
-                <input type="radio" id="star5" name="rate" value="5"/>
+                <input type="radio" id="star5" name="rate" value="5" />
                 <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4"/>
+                <input type="radio" id="star4" name="rate" value="4" />
                 <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3"/>
+                <input type="radio" id="star3" name="rate" value="3" />
                 <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2"/>
+                <input type="radio" id="star2" name="rate" value="2" />
                 <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1"/>
+                <input type="radio" id="star1" name="rate" value="1" />
                 <label for="star1" title="text">1 star</label>
             </div> 
  
@@ -58,13 +78,17 @@
 
         </div>
 
+
+
         <!--Review section-->
         <div id="reviews-container">  
             
             <h2>Reviews</h2>
 
+
             <!--Write review button-->
 			<button id="writeReview" onclick="change()">Write Review </button>
+
 
                 <!--Review Form-->
 				<div id="form" class="form">
@@ -80,7 +104,7 @@
 						<input type="text" id="email"><br><br>
 
 						<label>Enter resident review</label><br>
-						<textarea rows = "5" cols = "60" name = "resDescription" id="revDes"> </textarea> <br><br>
+						<input type="text" id="revDes" ><br><br>
 						
 
                         <!--Review Submit button-->
@@ -102,20 +126,15 @@
 		
 
         <!--Map container-->
-        <div id="mapContainer" onclick="enlargeMap()"> 
+        <div id="map-container"> 
 
             <!--Map-->
             map
             
         </div>
-        
-        <!-- <div id="mapEnlarge">
-            <span id="close">x</span>
-        </div> -->
-           
-       
-    </main>
 
+    </main>
+    
     <script src="../JavaScript_files/respage.js"></script>
 
     </body>
