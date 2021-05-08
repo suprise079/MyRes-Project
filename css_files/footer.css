@@ -1,44 +1,24 @@
 footer{
     float: left;
     background-color: #1c467D;
-    margin-top: 200px;
+    margin-top: 50px;
     clear: both;
     width:100%;
     padding-top: 15px;
    
 }
-.emailicons{
-    margin-left: 500px;
-    margin-bottom: -171px;
-   
 
+/* aligning icons and links in the footer*/
+.grouped_items {
+    text-align: center;
 }
-.tel{
-    margin-left: 740px;
-    margin-bottom: -130px;
-}
-.insta{
-    margin-left: 620px;
-    margin-bottom: -92px;
-   
 
+.grouped_items a{
+    color: white;
 }
-.twitter{
-    margin-left: 680px;
-    margin-bottom: -52px;
 
-}
-.links{
-    margin-left: 460px;   
-}
-.links a{
-    color:black;
-}
-.copyrights{
-    margin-left:499px ;
-    
-}
-.youtube{
-    margin-left: 565px;
-    
+.social_icons {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
 }

@@ -12,7 +12,6 @@ header {
     text-align: center;
     align-items: center;
     background-color: #1c467D;
-    max-width: 100%;
 }
 
 #logoImg {
@@ -32,16 +31,17 @@ header {
 }
 
 #searchSymbol {
-    width: 50px;
+    width: 30px;
 }
 
-header a {
+.header_links {
     border: 10px solid #1c467D;
     background-color: #5bccf6;
     color: black;
     border-radius: 20px;
     text-decoration: none;
     height: 50px;
+    padding-top: 3px;
 }
 
 #loginButton {
@@ -53,99 +53,55 @@ header a {
     
 }
 
-.tab{
-    position: relative;
-    width: 100%;
-    left: 10px;
-    margin-top: 0px;
-    
-    width: 100%;
-    min-height: 4em;
-    max-height: 10em;
-    padding-left: 10px;
-}
-
-.tab input {
-    height: 25px;
-    margin-top: 0.8%;
-}
-
-
-#searchImage {
-    background-color: #1c467D;
-    height: 25px;
-    border: 1px solid black;
-    border-left: none; 
-    cursor: pointer;
-    image-rendering:auto;
-}
-
-.tab a{
-    margin-top: 0%;
-    text-decoration: none;
-    border : 8px solid #E1DAD8;
-    text-align: center;
-    background-color: #5bccf6;
-    
-    height: 40px;
-    color: black;
-
-}
-
+/* Container to display all reses */
 #searchResults {
-    max-width: 80%;
+    max-width: 100%;
     min-height: 200px;
+    margin-top: 9px;
     justify-content: center;
-    
+    background-color: white;
 }
 
 /* Boxes that display each res*/
-article {
+.res_container {
     justify-content: center;
-    max-height: 50%;
-    border: 10px solid  #E1DAD8;
+    height: fit-content;
+    border: 10px solid  #ffffff;
     margin: 0px;
     background-color: #1c467D;
     float: left;
+    padding-bottom: 3px;
 }
 
 /*Picture displayed per res*/
-#displayPic {
-    visibility: none;
-    width: 20px;
-    height: 400px;
-}
-
-/*styling for rows inside article that display reses*/
-tr {
+.displayPic {
+    padding-top: 10px;
     width: 100%;
+    height: 50%;
 }
 
-/*for positioning text inside the res boxes*/
-b {
-    color: white;
-    position: relative;
-    left: 30%;
-    top: 40%;
+/*Res title for all reses*/
+#res_title {
+  font-size: 22pt;
+  color: white;
+  text-align:center;
 }
 
-/*Button to view more about res*/
-.viewButton {
-    text-decoration: none;
-    text-align: center;
-    background-color: #5bccf6;
-    border-radius: 10px;
-    padding: 3px;
-    color: black;
-    position: relative;
-    left: 30%;
-    top: 42%;
-    box-shadow: 2px 5px 4px;
+/*Res properties display*/
+.res_info {
+  background-color: #5bccf6;
+  border-bottom: 1px solid black;
+  text-align: center;
 }
 
-.viewButton:hover {
-    background-color: red;
-    transition: 2s;
+/* Button to view accomodation */
+.view_acc {
+  text-decoration: none;
+  background-color: #7ED956;
+  width: 100%;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*Positioning the filter box*/
@@ -185,6 +141,7 @@ h4 {
     transition: 2s;
 }
 
+/* used to switch between location types in filter */
 .hide {
     display: none;
 }
@@ -200,13 +157,6 @@ h4 {
 
 #priceRange {
     width: 250px;
-}
-
-#logo {
-    position: relative;
-    right: -500px;
-    top: -30px;
-    width: 10%;
 }
 
 /*aligning the sliding image, will remove with javascript*/
@@ -234,21 +184,16 @@ h4 {
 
 /*Container for the sliding image*/
 .ReSlideShow {
-    max-width: 1000px;
+    max-width: 60%;
+    margin: auto;
     position: relative;
-    margin-left: 500px;
-    width: 50em;
-    height: 40%;
-    margin-left: 390px;
-    margin-top: -10px;
 }
 .Res{
     display: none;
 }
 .Res img {
-    width: 50em;
-    height: 20em;
-    size: 20%;
+    width: 100%;
+    height: 50%;
 }
 
 .before, .after{
@@ -294,8 +239,7 @@ h4 {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin : 0 2px 25px 400px;
-  
+  margin-left: 24%;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -317,44 +261,25 @@ h4 {
 footer{
     float: left;
     background-color: #1c467D;
-    margin-top: 200px;
+    margin-top: 50px;
     clear: both;
     width:100%;
     padding-top: 15px;
    
 }
-.emailicons{
-    margin-left: 500px;
-    margin-bottom: -171px;
-   
 
+/* aligning icons and links in the footer*/
+.grouped_items {
+    text-align: center;
 }
-.tel{
-    margin-left: 740px;
-    margin-bottom: -130px;
-}
-.insta{
-    margin-left: 620px;
-    margin-bottom: -92px;
-   
 
+.grouped_items a{
+    color: white;
 }
-.twitter{
-    margin-left: 680px;
-    margin-bottom: -52px;
 
+.social_icons {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
 }
-.links{
-    margin-left: 460px;   
-}
-.links a{
-    color:black;
-}
-.copyrights{
-    margin-left:499px ;
-    
-}
-.youtube{
-    margin-left: 565px;
-    
-}
+

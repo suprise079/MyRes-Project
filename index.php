@@ -14,18 +14,18 @@
 <body id="body">
 
     <header class="row">
-        <!-- Added div to align logo with 12 grid system -->
+        <!-- Added div to align logo picture and comapny name -->
         <div class="col-lg-3">
            <img src="pictures\logoNew.jpeg" id="logoImg"> 
            <span id="resName">MyRes</span>
        </div>
        <input type="text" id="searchRes" class="col-lg-1">
-       <img src="pictures\search.png" id="searchSymbol" class="col-lg-1">
+       <a href="" class="col-lg-1"><img src="pictures\search.png" id="searchSymbol"></a>
        <!-- Added div to all links with 12 grid system -->
        <div class="row col-lg-6">
-           <a href="" class="col-lg-3">Contacts</a>
-           <a href="" class="col-lg-3">About us</a>
-           <a href="" class="col-lg-3">Add Res</a>
+           <a href="" class="header_links col-lg-3">Contacts</a>
+           <a href="" class="header_links col-lg-3">About us</a>
+           <a href="" class="header_links col-lg-3">Add Res</a>
            <button id="loginButton" class="col-lg-3">Login</button>
        </div>
     </header>
@@ -122,20 +122,22 @@
       <?php for ($i=0; $i < 6; $i++) {  ?>
 
         <!-- Container for each res displayed -->
-       <article class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-         <table>
-            <?php $photo = "src=".$photos[0];?>
-            <tr><img <?php echo $photo; ?> alt="ResPicture" id="displayPic"></tr><br> <!-- Picture of specific res -->
-            <tr><?php echo $res_name[0]; ?> </tr><br> <!-- Name of res -->
-            <tr><?php echo $sharing[0] ?></tr><br>  <!-- Number of sharing -->
-            <tr><?php echo $location[0] ?></tr><br>  <!-- Location of the res -->
-         </table>
+       <article class="res_container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <?php $photo = "src=".$photos[0]." alt='ResPicture' class='displayPic'";?>
+            <img <?php echo $photo; ?> > <!-- Picture of specific res -->
+            <div id="res_title"><?php echo $res_name[0]; ?> </div> <!-- Name of res -->
+            <div class="res_info"><?php echo $sharing[0] ?></div>  <!-- Number of sharing -->
+            <div class="res_info"><?php echo $location[0] ?></div>  <!-- Location of the res -->
+            <div class="res_info"><?php echo $prices[0] ?></div>  <!-- price of the res -->
+            <div class="view_acc"><a href="" class="view_acc">View Accomodation</a></div>  <!-- Link to view more about the res -->
        </article>
       <?php  }?>
         
     </section>
-
-    <hr>
+    
+    <!--  -->
+    <hr style="clear: both;">
+    
      <!--The Res SlideShow Pictures-->
     <div class ="ReSlideShow">
 
@@ -164,37 +166,15 @@
 
         <br>
 
-        <div decoration = "text-align:center">
-            <span class="bullet" onclick="currentSlide(1)"></span>
+        <div>
+            <div class="bullet" onclick="currentSlide(1)"></div>
             <span class="bullet" onclick="currentSlide(2)"></span>
             <span class="bullet" onclick="currentSlide(3)"></span>
-          </div>
-
-
-    
-        
-
-
-    </div>
+        </div>
+      </div>
     
 
-    <!-- footer information -->
- <footer>
-       <input type="image" src="Icons\email.png" width = "30px" height = "30px" class="emailicons" /></P>
-       <input type="image" src="Icons\telephone.png" width = "30px" height = "30px" class="tel" /></P>
-       <input type="image" src="Icons\insta.png" width = "30px" height = "30px"class="insta" /></P>
-       <input type="image" src="Icons\twitter.png" width = "30px" height = "30px" class="twitter" /></P>
-       <input type="image" src="Icons\YouTube.png" width = "30px" height = "30px" class="youtube" /></P>
 
-       <br>
-       <div class="links">
-       <a href="">Privacy Policy |</a>
-       <a href="">Cookie Policy |</a>
-       <a href="">Terms & Conditions</a>
-       </div>
-       <br>
-       <P class="copyrights"><img src="Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >2021 MyRes. All Rights Reserved </P>
-  </footer>
 
 <script type="text/javascript" src="javaScript_files\homePage.js"></script>
 <script type="text/javascript" src="JavaScript_files\index_slide.js"></script>

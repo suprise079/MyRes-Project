@@ -1,17 +1,19 @@
  <!-- footer information -->
+ <link rel="stylesheet" type="text/css" href="..\css_files\footer.css">
  <footer>
-       <input type="image" src="Icons\email.png" width = "30px" height = "30px" class="emailicons" /></P>
-       <input type="image" src="Icons\telephone.png" width = "30px" height = "30px" class="tel" /></P>
-       <input type="image" src="Icons\insta.png" width = "30px" height = "30px"class="insta" /></P>
-       <input type="image" src="Icons\twitter.png" width = "30px" height = "30px" class="twitter" /></P>
-       <input type="image" src="Icons\YouTube.png" width = "30px" height = "30px" class="youtube" /></P>
-
-       <br>
-       <div class="links">
-       <a href="">Privacy Policy |</a>
-       <a href="">Cookie Policy |</a>
+    <div class="grouped_items">
+       <a href=""><input type="image" src="Icons\email.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\telephone.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\insta.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\twitter.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\YouTube.png" class="social_icons" /></a>
+    </div>
+    <br>
+    <div class="grouped_items">
+       <a href="">Privacy Policy | </a>
+       <a href="">Cookie Policy | </a>
        <a href="">Terms & Conditions</a>
-       </div>
+    </div>
        <br>
-       <P class="copyrights"><img src="Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >2021 MyRes. All Rights Reserved </P>
+       <P class="grouped_items" style="color: white"><img src="Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >2021 MyRes. All Rights Reserved </P>
   </footer>
