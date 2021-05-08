@@ -123,6 +123,7 @@ body{
     width: 250px;
     border: none;
     border-bottom: 1px solid black;
+    display: flex;
     
 }
 
@@ -252,5 +253,14 @@ input[type = "checkbox"]{
 
 
 }
+
+.Background-box .Register-box .form .error-text {
+    background: #F8D7DA;
+  
+
+}
+
+
+
 
 
