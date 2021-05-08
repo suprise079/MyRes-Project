@@ -33,10 +33,10 @@ main {
 }
     
 
-/*.enlarge:hover {
+.enlarge:hover {
     transform: scale(1.5);
     transition: 2.0s;
-}*/
+}
 
 
 

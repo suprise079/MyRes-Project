@@ -119,7 +119,7 @@
          <!-- Import res database -->
       <?php include 'database\reses_information.php'; ?>
       <!-- Looping through all reses found on database that match filter -->
-      <?php for ($i=0; $i < 6; $i++) {  ?>
+      <?php for ($i=0; $i < 12; $i++) {  ?>
 
         <!-- Container for each res displayed -->
        <article class="res_container col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -173,9 +173,7 @@
         </div>
       </div>
     
-
-
-
+      <?php include 'php_files\Footer.php'; ?>
 <script type="text/javascript" src="javaScript_files\homePage.js"></script>
 <script type="text/javascript" src="JavaScript_files\index_slide.js"></script>
 
