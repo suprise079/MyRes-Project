@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css_files\HomePage.css">
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
+    <!-- Import res database -->
+    <?php require 'database\reses_information.php';  ?>
 
 </head>
 <body id="body">
@@ -116,8 +118,7 @@
 
     <!-- section for displaying all reses using 12-grid bootstrap -->
     <section id="searchResults" class="row">
-         <!-- Import res database -->
-      <?php include 'database\reses_information.php'; ?>
+
       <!-- Looping through all reses found on database that match filter -->
       <?php for ($i=0; $i < 12; $i++) {  ?>
 
@@ -173,7 +174,26 @@
         </div>
       </div>
     
-      <?php include 'php_files\Footer.php'; ?>
+  <!-- footer information -->
+ <link rel="stylesheet" type="text/css" href="..\css_files\footer.css">
+ <footer>
+    <div class="grouped_items">
+       <a href=""><input type="image" src="Icons\email.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\telephone.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\insta.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\twitter.png" class="social_icons" /></a>
+       <a href=""><input type="image" src="Icons\YouTube.png" class="social_icons" /></a>
+    </div>
+    <br>
+    <div class="grouped_items">
+       <a href="">Privacy Policy | </a>
+       <a href="">Cookie Policy | </a>
+       <a href="">Terms & Conditions</a>
+    </div>
+       <br>
+       <P class="grouped_items" style="color: white"><img src="Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >  2021 MyRes. All Rights Reserved </P>
+  </footer>
+
 <script type="text/javascript" src="javaScript_files\homePage.js"></script>
 <script type="text/javascript" src="JavaScript_files\index_slide.js"></script>
 

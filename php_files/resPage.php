@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="..\css_files\respage.css">
 	<!-- bootstrap css files -->
 	<link rel="stylesheet" type="text/css" href="..\css_files\Bootstrap_css\bootstrap-grid.css">
+    <!-- street view api -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
 </head>
 <body>
 
@@ -25,29 +28,34 @@
 
         </div>
 
+        <!-- street view -->
+         <div id="map"></div>
+    <div id="pano"></div>
 
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize&libraries=&v=weekly"
+      async
+    ></script>
+
+    <!-- Accomodation Images -->
         <div id="res-pictures" class="row"> 
-            
-            
-            <section id="streetview" class="imgs col-md-6 section enlarge" >
-                <p>street view</p>
             </section>
-            <section id="img1" class="imgs col-md-6 section enlarge">
+            <section id="img1" class="imgs col-md-6 section">
                 <p>image 1</p>
             </section>
-            <section id="img2" class="imgs col-md-6 section enlarge">
+            <section id="img2" class="imgs col-md-6 section">
                 <p>image 2</p>
             </section>
-            <section id="img3" class="imgs col-md-6 section enlarge">
+            <section id="img3" class="imgs col-md-6 section">
                 <p>image 3</p>
             </section>
-			<section id="img4" class="imgs col-md-6 section enlarge">
+			<section id="img4" class="imgs col-md-6 section">
                 <p>image 4</p>
             </section>
-            <section id="img5" class="imgs col-md-6 section enlarge" >
+            <section id="img5" class="imgs col-md-6 section" >
                 <p>image 5</p>
             </section>
-            <div class="container">
         </div>
         <br>
 
@@ -94,23 +102,18 @@
 				</div>
 
         </div>
-
-		
-
+        
         <!--Map container-->
         <div id="map-container"> 
-
             <!--Map-->
             map
-            
         </div>
-        
-
     </main>
-   
+
     <script src="../JavaScript_files/respage.js"></script>
 
     <?php include 'Footer.php'; ?>
+
     </body>
 </html>
 </body>

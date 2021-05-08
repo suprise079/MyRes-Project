@@ -27,15 +27,23 @@ main {
     clear: right;
 }
 
+/* street view map styling*/
+#map, #pano {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
 .section {
     border: 1px solid black;
     background-color: #FFFFFF;
+    transform: scale(1.5);
+    transition: 2.0s;
 }
     
 
 .enlarge:hover {
-    transform: scale(1.5);
-    transition: 2.0s;
+
 }
 
 
