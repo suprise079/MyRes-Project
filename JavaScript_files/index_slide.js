@@ -1,4 +1,4 @@
-var slideIndex = 1;
+/*var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -25,4 +25,22 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   bullet[slideIndex-1].className += " active";
+}*/
+
+var SlideIndex = 0;
+showSlides();
+
+function showSlides(){
+  var i ;
+  var slides = document.getElementsByClassName("Res");
+  for(i =0; i<slides.length;i++){
+    slides[i].style.display = "none";
+
+  }
+
+  SlideIndex++;
+  if(SlideIndex>slides.length){SlideIndex = 1}
+  slides[SlideIndex].style.displayn = "block";
+  setTimeout(showSlides,2000);
+  
 }
