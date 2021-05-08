@@ -2,7 +2,7 @@
 <header class="row">
   <!-- Added div to align logo picture and comapny name -->
   <div class="col-lg-6">
-    <img src="pictures\logoNew.jpeg" id="logoImg"> 
+    <img src="..\pictures\logoNew.jpeg" id="logoImg"> 
     <span id="resName">MyRes</span>
   </div>
 

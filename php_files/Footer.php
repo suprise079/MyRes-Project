@@ -1,5 +1,5 @@
  <!-- footer information -->
-    <!-- footer information -->
+ <link rel="stylesheet" type="text/css" href="..\css_files\footer.css">
  <footer>
     <div class="grouped_items">
        <a href=""><input type="image" src="Icons\email.png" class="social_icons" /></a>
