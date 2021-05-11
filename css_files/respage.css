@@ -23,27 +23,33 @@ main {
 /*Res pictures properties*/
 #res-pictures {
     float: left;
-    max-width: 50%;
+    width: 100%;
     clear: right;
 }
 
 /* street view map styling*/
-#map, #pano {
+#map {
   float: left;
   height: 100%;
   width: 50%;
 }
 
-.section {
-    border: 1px solid black;
-    background-color: #FFFFFF;
-    transform: scale(1.5);
-    transition: 2.0s;
+#Gallery_heading {
+  margin-top: 33%;
+  clear: both;
+  background-color: grey;
+  padding: 5px;
+}
+
+.pictures {
+    border: 10px solid #E1DAD8;
+    height: 300px;
 }
     
 
-.enlarge:hover {
-
+.pictures:hover {
+  transform: scale(1);
+  transition: 2s;
 }
 
 
@@ -95,7 +101,7 @@ form.stars {
     display: inline-block;
   }
   
-  input.star { display: none; }
+input.star { display: none; }
   
   label.star {
     float: right;
@@ -176,8 +182,4 @@ input,textarea {
     cursor: pointer;
   }
   
-
-
-/* border: 1px solid black; */
-
 
