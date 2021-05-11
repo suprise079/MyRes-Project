@@ -17,45 +17,36 @@
 	<!-- Page header -->
 	<?php include 'header.php'; ?>
 
-    <main id="main-container"> 
+    <main id="main-container row"> 
         
         <div id="res-description">
-            
-	    <h2> $resName </h2>
-	    <span> $address </span> <span> $email </span>
-	    <br><h3> Res Description </h3>
-	    <p> $resDescription </p>
-
+    	    <h2> $resName </h2>
+    	    <span> $address </span> <span> $email </span>
+    	    <br><h3> Res Description </h3>
+    	    <p> $resDescription </p>
         </div>
 
-        <!-- street view -->
-         <div id="map"></div>
-    <div id="pano"></div>
+        <!-- street view map -->
+        <div id="map">
+           <iframe src="https://www.google.com/maps/embed?pb=!4v1620740215845!6m8!1m7!1sfOfBMK46-gVbscWlU0ZRMg!2m2!1d-26.18361119313999!2d28.00619552354808!3f149.19291412865016!4f8.852909370330309!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <br>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize&libraries=&v=weekly"
-      async
-    ></script>
+        <h3 id="Gallery_heading">Gallery:</h3>
 
-    <!-- Accomodation Images -->
+        <!-- Display Accomodation Images -->
+        <!-- Import databes from res_information file -->
+        <?php require '..\database\reses_information.php'; ?>
+
         <div id="res-pictures" class="row"> 
-            </section>
-            <section id="img1" class="imgs col-md-6 section">
-                <p>image 1</p>
-            </section>
-            <section id="img2" class="imgs col-md-6 section">
-                <p>image 2</p>
-            </section>
-            <section id="img3" class="imgs col-md-6 section">
-                <p>image 3</p>
-            </section>
-			<section id="img4" class="imgs col-md-6 section">
-                <p>image 4</p>
-            </section>
-            <section id="img5" class="imgs col-md-6 section" >
-                <p>image 5</p>
-            </section>
+            <!-- loop through all pictures in database -->
+            <?php foreach ($photos as $picture) { ?>
+
+                <?php $photo = "<img src='$picture' alt='picture'>" ?>
+                <section class="col-md-3 col-lg-3 pictures">
+                    <p><?php echo $photo; ?></p>
+                </section>
+            <?php } ?>
         </div>
         <br>
 
@@ -103,11 +94,6 @@
 
         </div>
         
-        <!--Map container-->
-        <div id="map-container"> 
-            <!--Map-->
-            map
-        </div>
     </main>
 
     <script src="../JavaScript_files/respage.js"></script>
