@@ -129,7 +129,7 @@
             <div class="res_info"><?php echo $sharing[0] ?></div>  <!-- Number of sharing -->
             <div class="res_info"><?php echo $location[0] ?></div>  <!-- Location of the res -->
             <div class="res_info"><?php echo $prices[0] ?></div>  <!-- price of the res -->
-            <div class="view_acc"><a href="" class="view_acc">View Accomodation</a></div>  <!-- Link to view more about the res -->
+            <div class="view_acc"><a href="php_files\resPage.php" class="view_acc">View Accomodation</a></div>  <!-- Link to view more about the res -->
        </article>
       <?php  }?>
         
