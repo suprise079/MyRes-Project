@@ -11,7 +11,7 @@ header {
     padding: 10px;
     text-align: center;
     align-items: center;
-    background-color: #1c467D;
+    background-color: #272a4a;  
 }
 
 #logoImg {
@@ -35,9 +35,9 @@ header {
 }
 
 .header_links {
-    border: 10px solid #1c467D;
-    background-color: #5bccf6;
-    color: black;
+    border: 10px solid #272a4a;
+    background-color: #E1DAD8;
+    color:black;
     border-radius: 20px;
     text-decoration: none;
     height: 50px;
@@ -47,9 +47,10 @@ header {
 #loginButton {
     background-color: #7ED956;
     border-radius: 10px;
-    border: 10px solid #1c467D;
+    border: 10px solid #272a4a;
     height: 50px;
     border-radius: 20px;
+    color:black;
     
 }
 
@@ -66,9 +67,9 @@ header {
 .res_container {
     justify-content: center;
     height: fit-content;
-    border: 10px solid  #ffffff;
+    border: 10px solid  #E1DAD8;
     margin: 0px;
-    background-color: #1c467D;
+    background-color: #272a4a;
     float: left;
     padding-bottom: 3px;
 }
@@ -89,7 +90,7 @@ header {
 
 /*Res properties display*/
 .res_info {
-  background-color: #5bccf6;
+  background-color: #E1DAD8;
   border-bottom: 1px solid black;
   text-align: center;
 }
@@ -117,19 +118,19 @@ header {
 /*filter heading*/
 h3 {
     text-align: center;
-    background-color: #1c467D;
+    background-color: #272a4a;
     color: white;
     padding: 2px;
 }
 
 /*Sub headings inn the filter box*/
 h4 {
-    color: black
+    color: white;
 }
 
 /*Styling the two buttons under location filter*/
 .locationButtons {
-    background-color: #26A4EB;
+    background-color: #E1DAD8;
     margin: 5px;
     border: none;
     padding: 5px 10px 5px 10px;
@@ -260,7 +261,7 @@ h4 {
 
 footer{
     float: left;
-    background-color: #1c467D;
+    background-color: #272a4a;
     margin-top: 50px;
     clear: both;
     width:100%;
@@ -283,6 +284,13 @@ footer{
     margin: 5px;
 }
 .aboutHeader{
-    margin-left: 550px;
+    margin-left: 50%;
+    color:black;
 }
+#about_us{
+    text-align: left;
+    margin-left:50%;
+    
+}
+
 
