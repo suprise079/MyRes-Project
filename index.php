@@ -173,6 +173,8 @@
 
       <hr>
 
+      <img src="pictures\doodle.jpg" id="doodle" alt="student Accomodations">
+
       
       <div id="about_us">
         <h4 class = "aboutHeader">MYRES ABOUT US</h4>
