@@ -11,7 +11,7 @@ header {
     padding: 10px;
     text-align: center;
     align-items: center;
-    background-color: #1c467D;
+    background-color: #272a4a;  
 }
 
 #logoImg {
@@ -35,7 +35,7 @@ header {
 }
 
 .header_links {
-    border: 10px solid #1c467D;
+    border: 10px solid #272a4a;
     background-color: #5bccf6;
     color:white;
     border-radius: 20px;
@@ -47,9 +47,10 @@ header {
 #loginButton {
     background-color: #7ED956;
     border-radius: 10px;
-    border: 10px solid #1c467D;
+    border: 10px solid #272a4a;
     height: 50px;
     border-radius: 20px;
+    color:white;
     
 }
 
@@ -68,7 +69,7 @@ header {
     height: fit-content;
     border: 10px solid  #ffffff;
     margin: 0px;
-    background-color: #1c467D;
+    background-color: #272a4a;
     float: left;
     padding-bottom: 3px;
 }
@@ -117,7 +118,7 @@ header {
 /*filter heading*/
 h3 {
     text-align: center;
-    background-color: #1c467D;
+    background-color: #272a4a;
     color: white;
     padding: 2px;
 }
@@ -260,7 +261,7 @@ h4 {
 
 footer{
     float: left;
-    background-color: #1c467D;
+    background-color: #272a4a;
     margin-top: 50px;
     clear: both;
     width:100%;
