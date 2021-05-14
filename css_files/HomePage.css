@@ -36,8 +36,8 @@ header {
 
 .header_links {
     border: 10px solid #272a4a;
-    background-color: #5bccf6;
-    color:white;
+    background-color: #E1DAD8;
+    color:black;
     border-radius: 20px;
     text-decoration: none;
     height: 50px;
@@ -50,7 +50,7 @@ header {
     border: 10px solid #272a4a;
     height: 50px;
     border-radius: 20px;
-    color:white;
+    color:black;
     
 }
 
@@ -67,7 +67,7 @@ header {
 .res_container {
     justify-content: center;
     height: fit-content;
-    border: 10px solid  #ffffff;
+    border: 10px solid  #E1DAD8;
     margin: 0px;
     background-color: #272a4a;
     float: left;
@@ -90,7 +90,7 @@ header {
 
 /*Res properties display*/
 .res_info {
-  background-color: #5bccf6;
+  background-color: #E1DAD8;
   border-bottom: 1px solid black;
   text-align: center;
 }
@@ -125,12 +125,12 @@ h3 {
 
 /*Sub headings inn the filter box*/
 h4 {
-    color: black
+    color: white;
 }
 
 /*Styling the two buttons under location filter*/
 .locationButtons {
-    background-color: #26A4EB;
+    background-color: #E1DAD8;
     margin: 5px;
     border: none;
     padding: 5px 10px 5px 10px;
@@ -285,10 +285,12 @@ footer{
 }
 .aboutHeader{
     margin-left: 50%;
+    color:black;
 }
 #about_us{
     text-align: left;
     margin-left:50%;
     
 }
+
 
