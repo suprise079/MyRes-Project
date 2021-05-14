@@ -17,15 +17,32 @@
 <body>
  
 	<!-- Page header -->
-	<?php include 'header.php'; ?>
+	<?php require 'header.php'; 
+
+        //Connect to sql sever
+        require "..\database\sql_connection.php";
+        $mainID = $_GET['ID'];
+
+        $sql = mysqli_query($conn, "SELECT * FROM accomodation WHERE Res_ID = '$mainID'");
+        $accomodation = mysqli_fetch_array($sql);
+        /*Dictionary to translate sharing column in accomodation table*/
+        $dict = array('Yes' => 'Sharing', 'No' => 'Single')
+    ?>
 
     <main id="main-container row"> 
         
         <div id="res-description">
-    	    <h2> $resName </h2>
-    	    <span> $address </span> <span> $email </span>
-    	    <br><h3> Res Description </h3>
-    	    <p> $resDescription </p>
+    	    <h2> <?php echo $accomodation['Res_Name'] ?> </h2>
+        	    <span> <?php echo $accomodation['Address'] ?></span><br>
+                <span> <?php echo $accomodation['Email']; ?> </span><br>
+    	    <h3> Res Description </h3>
+    	    <p> <?php echo $accomodation['Description']; ?> </p>
+            <h3>Accomodation offers:</h3>
+            <ul>
+                <li><?php echo $dict[$accomodation['Sharing']]." rooms."; ?></li>
+                <li><?php echo "Located in ".$accomodation['Campus']; ?></li>
+                <li><?php echo "R{$accomodation['Price_Accreditation']} per student" ?></li>
+            </ul>
         </div>
 
         <!-- street view map -->
@@ -37,8 +54,8 @@
         <h3 id="Gallery_heading">Gallery:</h3>
 
         <!-- Display Accomodation Images -->
-        <!-- Import databes from res_information file -->
-        <?php require '..\database\reses_information.php'; ?>
+        <!-- Import databes from Filters file for pictures -->
+        <?php require '..\database\Filters.php'; ?>
 
         <div id="res-pictures" class="row"> 
             <!-- loop through all pictures in database -->

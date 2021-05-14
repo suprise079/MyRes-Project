@@ -1,23 +1,7 @@
 //global variable to determine which price is selected
 priceSelector = true;	//true edits min and false edits max 
+console.log('javascript loaded');
 
-//funtionality for By town button in filters
-function byTown() {
-	town = document.getElementById('towns');
-	campuses = document.getElementById("campuses");
-
-	town.className = "show";
-	campuses.className = "hide";
-}
-
-//funtionality for By campuses button in filters
-function byCampus() {
-	town = document.getElementById('towns');
-	campuses = document.getElementById("campuses");
-
-	town.className = "hide";
-	campuses.className = "show";
-}
 
 //set range input to edit min price
 function minPrice(){
@@ -43,4 +27,15 @@ function rangeInput(){
 	else{
 		max.value = rangeValue;
 	}
+}
+
+/* enable each filter change to refersh the reses container*/
+filters = document.getElementsByClassName('refresh');
+console.log(filters);
+
+for (i of filters) {
+  i.addEventListener('change', function() {
+    document.getElementById("searchResults").innerHTML.reload;
+    console.log("reloaded")
+  });
 }
