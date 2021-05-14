@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,14 +42,15 @@
 
         <div id="res-pictures" class="row"> 
             <!-- loop through all pictures in database -->
-            <?php foreach ($photos as $picture) { ?>
+            <?php foreach ($pictures as $picture) { ?>
 
-                <?php $photo = "<img src='$picture' alt='picture'>" ?>
-                <section class="col-md-3 col-lg-3 pictures">
-                    <p><?php echo $photo; ?></p>
-                </section>
+                <?php $photo = "<img src='$picture' alt='picture' class='imgs'>" ?>
+                <span class="pictures">
+                    <?php echo $photo; ?>
+                </span>
             <?php } ?>
         </div>
+        <hr style="clear: both;">
         <br>
 
 

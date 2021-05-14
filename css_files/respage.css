@@ -25,6 +25,7 @@ main {
     float: left;
     width: 100%;
     clear: right;
+    display: block;
 }
 
 /* street view map styling*/
@@ -41,15 +42,17 @@ main {
   padding: 5px;
 }
 
-.pictures {
-    border: 10px solid #E1DAD8;
-    height: 300px;
+.imgs {
+  transition: .5s;
+  width: 20%;
+  height: 200px
 }
-    
+ 
 
-.pictures:hover {
-  transform: scale(1);
-  transition: 2s;
+.imgs:hover {
+  transform: scale(1.5);
+  margin-left: 5%;
+  transition: 1s;
 }
 
 
