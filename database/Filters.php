@@ -5,15 +5,10 @@ error_reporting(E_ALL & ~E_WARNING);
 /* Get values of the filters*/
 /* initialising filters*/
 $campus = $_POST['campus'];
-echo $campus." campus<br>";
 $min_price = $_POST['minPrice'];
-echo $min_price." MIprice<br>";
 $max_price = $_POST['maxPrice'];
-echo $max_price." MAprice<br>";
 $rooms = $_POST['rooms'];
-echo $rooms." Rooms<br>";
 $ratings = $_POST['ratings'];
-echo $ratings." ratings<br>" ;
 
 #import sql database
 
