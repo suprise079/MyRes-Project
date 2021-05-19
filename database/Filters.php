@@ -1,97 +1,95 @@
-<?php 
+<?php
+
+
 error_reporting(E_ALL & ~E_WARNING);
 /* Get values of the filters*/
 /* initialising filters*/
 $campus = $_POST['campus'];
-echo $campus;
+echo $campus." campus<br>";
 $min_price = $_POST['minPrice'];
-echo $min_price;
+echo $min_price." MIprice<br>";
 $max_price = $_POST['maxPrice'];
-echo $max_price;
+echo $max_price." MAprice<br>";
 $rooms = $_POST['rooms'];
-echo $rooms;
+echo $rooms." Rooms<br>";
 $ratings = $_POST['ratings'];
-echo $ratings;
+echo $ratings." ratings<br>" ;
 
 #import sql database
 
 #initialise the sql query to all the ids in the accomodation
 #each time the code runs the ids will be decreased by the set filters
-require 'sql_connection.php';
+require 'database\sql_connection.php';
 $sql = mysqli_query($conn, "SELECT Res_ID FROM accomodation");
 
 
 function returnArray($sql){
-	$rows = "(";
+  $rows = "(";
 
-	while ($row = mysqli_fetch_assoc($sql)){
-		$rows .= $row['Res_ID'].",";
-	}
+  while ($row = mysqli_fetch_assoc($sql)){
+    $rows .= $row['Res_ID'].",";
+  }
 
-	$rows .= "0)";
-	
-	return $rows;
+  $rows .= "0)";
+  
+  return $rows;
 }
 
 
 if (isset($campus)) {
-	$sql = returnArray($sql);
-	echo $sql;
+  $sql = returnArray($sql);
 
-	$sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Campus = '$campus'");
-
-}
-
-if (isset($min_price)) {
-	$sql = returnArray($sql);
-	echo $sql;
-	$sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Price_Accreditation >= '$min_price'");
-
-	
-	echo $min_price;
+  $sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Campus = '$campus'");
 
 }
 
-if (isset($max_price)) {
-	$sql = returnArray($sql);
-	echo $sql;
+if ($min_price > 0) {
+  $sql = returnArray($sql);
+  
+  $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Price_Accreditation >= '$min_price'");
 
-	$sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Price_Accreditation <= '$max_price'");
+  
+
+}
+
+if ($max_price > 0) {
+  $sql = returnArray($sql);
+
+  $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Price_Accreditation <= '$max_price'");
 
 }
 
 if (isset($rooms)) {
-	echo "string";
-	$sql = returnArray($sql);
-	echo $sql;
+  $sql = returnArray($sql);
 
-	$sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Sharing = '$rooms'");
+  $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Sharing = '$rooms'");
 
 }
 
 if (isset($ratings)) {
-	$sql = returnArray($sql);
-	echo $sql;
+  $sql = returnArray($sql);
 
-	$sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in ($sql)");
+  $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql");
 
+}
+
+
+
+/*Covert sql result object into an array*/
+function sqlToArray($sqlResult){
+  $arr = [];
+  while ($line = mysqli_fetch_array($sqlResult)) {
+    $arr [] = $line[0];
+  }
+  return $arr;
 }
 
 $sql = returnArray($sql);
 
-/*Covert sql result object into an array*/
-function sqlToArray($sqlResult){
-	$arr = [];
-	while ($line = mysqli_fetch_array($sqlResult)) {
-		$arr [] = $line[0];
-	}
-	return $arr;
-}
-
-
 /*Get accomodation information and convert to array for readability*/
 $results = mysqli_query($conn, "SELECT Res_ID FROM accomodation WHERE Res_ID in $sql");
 $results = sqlToArray($results);
+
 
 $resNameDisplay = mysqli_query($conn, "SELECT Res_Name FROM accomodation WHERE Res_ID in $sql");
 $resNameDisplay = sqlToArray($resNameDisplay);
@@ -114,8 +112,9 @@ $photos = array('pictures\RichmondChill.jpeg', 'pictures\RichmondEnter.jpeg', 'p
 /*Sample for testing resPage gallery */
 $pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.jpeg', '..\pictures\RichmondOutside.jpeg', '..\pictures\RichmondRooms.jpg', '..\pictures\RichmondStudy.jpeg');
 
+/*include '..\index.php';*/
+
+/*header("Location: ..\index.php?");*/
 
 
-
-
- ?>
+?>

@@ -59,7 +59,6 @@ header {
     max-width: 100%;
     min-height: 200px;
     margin-top: 9px;
-    justify-content: center;
     background-color: white;
 }
 
@@ -83,9 +82,11 @@ header {
 
 /*Res title for all reses*/
 #res_title {
-  font-size: 22pt;
+  font-size: 2em;
   color: white;
   text-align:center;
+  min-height: 3em;
+  height: fit-content;
 }
 
 /*Res properties display*/
