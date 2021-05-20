@@ -135,29 +135,54 @@
 
         <div class="Res">
             <div class="number fades">1 / 3</div>
-            <img src="pictures\kingsway place.jpg" width = 100%>
+            <img src="pictures\Respublica.jpg" width = 100%>
             <div class="caption">Caption Text</div>
           </div>
         
           <div class="Res">
             <div class="number fades">2 / 3</div>
-            <img src="pictures\richmondRooms.jpg"  width = 100%>
+            <img src="pictures\republica2.jpeg"  width = 100%>
             <div class="caption">Caption Two</div>
           </div>
         
           <div class="Res">
             <div class="number fades">3 / 3</div>
-            <img src="pictures\studyRoom.jpg" width = 100% >
+            <img src="pictures\republica3.jpeg" width = 100% >
             <div class="caption">Caption Three</div>
           </div>
+
+          <div class="Res">
+            <div class="number fades">4 / 4</div>
+            <img src="pictures\republica4.jpeg" width = 100% >
+            <div class="caption">Caption Three</div>
+          </div>
+
+          <div class="Res">
+            <div class="number fades">5 / 5</div>
+            <img src="pictures\republica5.jpeg" width = 100% >
+            <div class="caption">Caption Three</div>
+          </div>
+
+          <div class="Res">
+            <div class="number fades">6 / 6</div>
+            <img src="pictures\republica6.jpeg" width = 100% >
+            <div class="caption">Caption Three</div>
+          </div>
+
+
+
+
 
         
          </div>
 
         <br>
 
-        <div>
+        <div class ="bullets">
             <div class = "bullet" ></div>
+            <span class= "bullet" ></span>
+            <span class= "bullet" ></span>
+            <span class= "bullet" ></span>
             <span class= "bullet" ></span>
             <span class= "bullet" ></span>
         </div>
@@ -198,9 +223,9 @@
     </div> </div>
     <br>
     <div class="grouped_items">
-       <a href="">Privacy Policy | </a>
-       <a href="">Cookie Policy | </a>
-       <a href="">Terms & Conditions</a>
+       <a href="html_files\policies.html">Privacy Policy | </a>
+       <a href="html_files\policies.html">Cookie Policy | </a>
+       <a href="html_files\policies.html">Terms & Conditions</a>
     </div>
        <br>
        <p class="grouped_items" style="color: white">&copy; 2021 MyRes. All Rights Reserved </p>
