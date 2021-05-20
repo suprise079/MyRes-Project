@@ -11,6 +11,7 @@ body{
     font-family: sans-serif;
     line-height: 1.5;
     margin: 0;
+    max-width: 100%;
 
 }
 
@@ -28,7 +29,7 @@ body{
 
 
 
-/* Overall img and forms containe*/
+/* Overall img and forms container*/
 
 .Background-box .Register-box{
     background-color:white;
@@ -40,6 +41,7 @@ body{
     transform:translate(-50%,-50%);
     display: flex;
     flex-wrap: wrap;
+    
 
 
 }
