@@ -28,8 +28,7 @@
        <div class="row col-lg-6">
            <a href=#contacts class="header_links col-lg-3">Contacts</a>
            <a href=#about_us class="header_links col-lg-3">About us</a>
-           <a href="" class="header_links col-lg-3">Add Res</a>
-           <button id="loginButton" class="col-lg-3">Login</button>
+           <button id="Apply" class="col-lg-3">Apply</button>
        </div>
     </header>
     
