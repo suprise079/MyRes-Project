@@ -1,3 +1,4 @@
+<?php error_reporting(0); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +35,7 @@
     
     <!-- filters section -->
    <section id="filters">
-      <form action="index.php" method="post">
+      <form action="database\Filters.php" method="post">
         <input type="submit" name="name" value="submit">
         <!-- class 'refresh is used to reference filters in javascript for auto reload' -->
         <h3>Filters</h3>
@@ -94,16 +95,9 @@
 
     <!-- section for displaying all reses using 12-grid bootstrap -->
     <section id="searchResults" class="row">
-      
-      <?php 
-        /*Import database for displaying reses*/
-        require "database\Filters.php";
-        /*require "database\Filters.php";*/
-        $counter = 0;
-        /*Dictionary to translate sharing column in accomodation table*/
-        $dict = array('Yes' => 'Sharing', 'No' => 'Single');
-
-        
+      <!-- Import database for displaying reses -->
+      <?php require "database\Filters.php";
+            $counter = 0;
       ?>
 
       <!-- Looping through all reses found on database that match filter -->
@@ -111,12 +105,13 @@
 
         <!-- Container for each res displayed -->
        <article class="res_container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+       
 
             <?php $photo = "src=".$photos[0]." alt='ResPicture' class='displayPic'";?>
             <?php $link =  "href='php_files/resPage.php?ID=$id'" ?>
             <img <?php echo $photo; ?> > <!-- Picture of specific res -->
             <div id="res_title"><?php echo $resNameDisplay[$counter]; ?> </div> <!-- Name of res -->
-            <div class="res_info"><?php echo $dict[$roomsDisplay[$counter]] ?></div>  <!-- Number of sharing -->
+            <div class="res_info"><?php echo $roomsDisplay[$counter] ?></div>  <!-- Number of sharing -->
             <div class="res_info"><?php echo $campusDisplay[$counter]; ?></div>  <!-- Location of the res -->
             <div class="res_info"><?php echo "R".$priceDisplay[$counter]; ?></div>  <!-- price of the res -->
             <div class="view_acc"><a <?php echo $link ?> class="view_acc">View Accomodation</a></div>  <!-- Link to view more about the res -->
@@ -130,7 +125,6 @@
     <!--  -->
     <hr style="clear: both;">
     
-    <h3>Recommended Accomodations</h3>
      <!--The Res SlideShow Pictures-->
     <div class ="ReSlideShow">
 
@@ -158,9 +152,9 @@
         <br>
 
         <div>
-            <div class="bullet" ></div>
-            <span class="bullet" ></span>
-            <span class="bullet" ></span>
+            <div class = "bullet" ></div>
+            <span class= "bullet" ></span>
+            <span class= "bullet" ></span>
         </div>
       </div>
 
