@@ -193,11 +193,11 @@
  <link rel="stylesheet" type="text/css" href="..\css_files\footer.css">
  <footer id = "contacts">
     <div class="grouped_items"><div id = "contacts">
-       <a href=""><input type="image" src="Icons\email.png" class="social_icons" /></a>
+       <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMGFDwLDhwLHrtZnbZsrKsLZjrDHJqgqdSVZtmFmQnTfMJjKkCNhBZqNrpNHDXPDRGZwJH"><input type="image" src="Icons\email.png" class="social_icons" /></a>
        <a href=""><input type="image" src="Icons\telephone.png" class="social_icons" /></a>
-       <a href=""><input type="image" src="Icons\insta.png" class="social_icons" /></a>
-       <a href=""><input type="image" src="Icons\twitter.png" class="social_icons" /></a>
-       <a href=""><input type="image" src="Icons\YouTube.png" class="social_icons" /></a>
+       <a href="https://www.instagram.com/kingswayplaceofficial/"><input type="image" src="Icons\insta.png" class="social_icons" /></a>
+       <a href="https://twitter.com/staysouthpoint?s=08"><input type="image" src="Icons\twitter.png" class="social_icons" /></a>
+       <a href="https://www.youtube.com/watch?v=0Skd6opSpTg&ab_channel=SouthPointClic"><input type="image" src="Icons\YouTube.png" class="social_icons" /></a>
     </div> </div>
     <br>
     <div class="grouped_items">
