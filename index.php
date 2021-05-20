@@ -138,21 +138,43 @@
 
         <div class="Res">
             <div class="number fades">1 / 3</div>
-            <img src="pictures\kingsway place.jpg" width = 100%>
+            <img src="pictures\Respublica.jpg" width = 100%>
             <div class="caption">Caption Text</div>
           </div>
         
           <div class="Res">
             <div class="number fades">2 / 3</div>
-            <img src="pictures\richmondRooms.jpg"  width = 100%>
+            <img src="pictures\republica2.jpeg"  width = 100%>
             <div class="caption">Caption Two</div>
           </div>
         
           <div class="Res">
             <div class="number fades">3 / 3</div>
-            <img src="pictures\studyRoom.jpg" width = 100% >
+            <img src="pictures\republica3.jpeg" width = 100% >
             <div class="caption">Caption Three</div>
           </div>
+
+          <div class="Res">
+            <div class="number fades">4 / 4</div>
+            <img src="pictures\republica4.jpeg" width = 100% >
+            <div class="caption">Caption Three</div>
+          </div>
+
+          <div class="Res">
+            <div class="number fades">5 / 5</div>
+            <img src="pictures\republica5.jpeg" width = 100% >
+            <div class="caption">Caption Three</div>
+          </div>
+
+          <div class="Res">
+            <div class="number fades">6 / 6</div>
+            <img src="pictures\republica6.jpeg" width = 100% >
+            <div class="caption">Caption Three</div>
+          </div>
+
+
+
+
 
         
          </div>
