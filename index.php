@@ -38,8 +38,8 @@
     
     <!-- filters section -->
    <section id="filters">
-      <form action="database\Filters.php" method="post">
-        <input type="button" name="name" id="submit" value="submit">
+      <form action="index.php" method="post">
+        <input type="submit" name="name" id="submit" value="submit">
         <!-- class 'refresh is used to reference filters in javascript for auto reload' -->
         <h3>Filters</h3>
 

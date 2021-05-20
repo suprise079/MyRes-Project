@@ -109,7 +109,7 @@ $pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.j
 #include '..\index.php';
 
 #header("Location: ..\index.php?");
-echo "string";
+
 
 
 ?>
