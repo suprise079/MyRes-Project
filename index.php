@@ -83,7 +83,7 @@
 
         <hr>
         <!-- Options to choose to choose acoording to rating -->
-        <h4>Ratings</h4>
+        <h4>Student Ratings</h4>
         <!-- Star ratings -->
           <input type="radio" id="5star" name='ratings' class="refresh">
           <label for="5star">&#9733 &#9733 &#9733 &#9733 &#9733</label>
