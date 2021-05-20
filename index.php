@@ -12,6 +12,10 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
     <!-- Import res database -->
+
+
+    <!--font import-->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
     
 
 </head>
@@ -123,6 +127,8 @@
     
     <!--  -->
     <hr style="clear: both;">
+
+
     
      <!--The Res SlideShow Pictures-->
     <div class ="ReSlideShow">
