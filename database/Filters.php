@@ -1,7 +1,7 @@
 <?php
 
 
-error_reporting(E_ALL & ~E_WARNING);
+error_reporting(0);
 
 #Get values of the filters
 #initialising filters
@@ -109,7 +109,7 @@ $pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.j
 #include '..\index.php';
 
 #header("Location: ..\index.php?");
-
+echo "string";
 
 
 ?>
