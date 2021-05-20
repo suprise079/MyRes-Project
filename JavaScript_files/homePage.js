@@ -30,7 +30,7 @@ function rangeInput(){
 }
 
 /* enable each filter change to refersh the reses container*/
-filters = document.getElementsByClassName('refresh');
+/*filters = document.getElementsByClassName('grefresh');
 console.log(filters);
 
 for (i of filters) {
@@ -43,15 +43,16 @@ for (i of filters) {
 $(document).ready(function(){
 	$("#submit").click(function(){
 		console.log("clicked");
-		results = array();
+		var results = array();
 		campus = $(".campus:checked").val();
 		$.post("./database/Filters.php",
 			{name:campus},
 			function(data){
+				console.log("running");
 				results = data;
 				console.log(data);
 			})
 		console.log("saved results: "+results);
 	})
-})
+})*/
 	

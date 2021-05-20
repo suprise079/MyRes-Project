@@ -17,9 +17,6 @@
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
     
-
-
-
   
 </head>
 <body id="body">
@@ -41,8 +38,8 @@
     
     <!-- filters section -->
    <section id="filters">
-      <form action="database\Filters.php" method="post">
-        <input type="button" name="name" id="submit" value="submit">
+      <form action="index.php" method="post">
+        <input type="submit" name="name" id="submit" value="submit">
         <!-- class 'refresh is used to reference filters in javascript for auto reload' -->
         <h3>Filters</h3>
 
