@@ -23,6 +23,7 @@ header {
 #resName {
     font-size: 18pt;
     color: white;
+    font-family: 'Lobster', cursive;
 }
 
 #searchRes {
@@ -128,6 +129,7 @@ h3 {
 /*Sub headings inn the filter box*/
 h4 {
     color: white;
+    font-family: 'Lobster', cursive;
 }
 
 /*Styling the two buttons under location filter*/

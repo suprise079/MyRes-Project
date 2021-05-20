@@ -12,18 +12,15 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
     <!-- Import res database -->
-<<<<<<< HEAD
     <!-- Jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
     
 
-=======
 
 
   
->>>>>>> 0722106c09722a268e50dec3499a9ca4e164d35d
 </head>
 <body id="body">
     <header class="row">
