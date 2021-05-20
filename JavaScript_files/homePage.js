@@ -1,19 +1,19 @@
 //global variable to determine which price is selected
 priceSelector = true;	//true edits min and false edits max 
-console.log('javascript loaded');
+console.log('javascript');
 
 
 //set range input to edit min price
-function minPrice(){
+$("#minPrice").mousedown(function(){
 	priceSelector = true;
 	console.log("min selected");
-}
+});
 
 //set range input to edit max price
-function maxPrice(){
+$("#maxPrice").mousedown(function(){
 	priceSelector = false;
 	console.log("max selected");
-}
+});
 
 //change min and max prices using the range input
 function rangeInput(){
@@ -39,3 +39,19 @@ for (i of filters) {
     console.log("reloaded")
   });
 }
+
+$(document).ready(function(){
+	$("#submit").click(function(){
+		console.log("clicked");
+		results = array();
+		campus = $(".campus:checked").val();
+		$.post("./database/Filters.php",
+			{name:campus},
+			function(data){
+				results = data;
+				console.log(data);
+			})
+		console.log("saved results: "+results);
+	})
+})
+	

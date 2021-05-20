@@ -15,7 +15,7 @@ $ratings = $_POST['ratings'];
 
 #initialise the sql query to all the ids in the accomodation
 #each time the code runs the ids will be decreased by the set filters
-require 'database\sql_connection.php';
+require 'sql_connection.php';
 $sql = mysqli_query($conn, "SELECT Res_ID FROM accomodation");
 
 
@@ -109,6 +109,7 @@ $pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.j
 #include '..\index.php';
 
 #header("Location: ..\index.php?");
+echo "string";
 
 
 ?>
