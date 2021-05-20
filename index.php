@@ -172,7 +172,7 @@
 
       
       <div id="about_us" class="col-lg-6">
-        <h4 class = "aboutHeader">MYRES ABOUT US</h4>
+        <h5 class = "aboutHeader">MYRES ABOUT US</h4>
 
         <P> We are a user-friendly platform that connects young people with places of residence during their study years. </P> <br>
         <p> We know that finding and renting out a place to stay can be a tedious experience so we have created a community where landlords 
