@@ -17,9 +17,6 @@
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
     
-
-
-
   
 </head>
 <body id="body">
