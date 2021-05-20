@@ -12,12 +12,18 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
     <!-- Import res database -->
+<<<<<<< HEAD
     <!-- Jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
     
 
+=======
+
+
+  
+>>>>>>> 0722106c09722a268e50dec3499a9ca4e164d35d
 </head>
 <body id="body">
     <header class="row">
@@ -27,7 +33,7 @@
            <span id="resName">MyRes</span>
        </div>
        <input type="text" id="searchRes" class="col-lg-1">
-       <a href="" class="col-lg-1"><img src="pictures\search.png" id="searchSymbol"></a>
+       <a href="" class="col-lg-1"><img src="pictures\search2.png" id="searchSymbol"></a>
        <!-- Added div to all links with 12 grid system -->
        <div class="row col-lg-6">
            <a href=#contacts class="header_links col-lg-3">Contacts</a>
@@ -165,7 +171,7 @@
 
       <hr>
 
-      <img src="pictures\doodle.jpg" id="doodle" alt="student Accomodations">
+      <img src="pictures\doodle2.png" id="doodle" alt="student Accomodations">
 
       
       <div id="about_us">
