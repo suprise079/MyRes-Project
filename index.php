@@ -24,7 +24,7 @@
            <span id="resName">MyRes</span>
        </div>
        <input type="text" id="searchRes" class="col-lg-1">
-       <a href="" class="col-lg-1"><img src="pictures\search.png" id="searchSymbol"></a>
+       <a href="" class="col-lg-1"><img src="pictures\search2.png" id="searchSymbol"></a>
        <!-- Added div to all links with 12 grid system -->
        <div class="row col-lg-6">
            <a href=#contacts class="header_links col-lg-3">Contacts</a>
@@ -162,7 +162,7 @@
 
       <hr>
 
-      <img src="pictures\doodle.jpg" id="doodle" alt="student Accomodations">
+      <img src="pictures\doodle2.png" id="doodle" alt="student Accomodations">
 
       
       <div id="about_us">
