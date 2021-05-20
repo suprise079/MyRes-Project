@@ -170,11 +170,11 @@
       </div>
 
       <hr>
-
-      <img src="pictures\doodle2.png" id="doodle" alt="student Accomodations">
+        <div class ="row">
+      <img src="pictures\doodle2.png" id="doodle" alt="student Accomodations" class="col-lg-6">
 
       
-      <div id="about_us">
+      <div id="about_us" class="col-lg-6">
         <h4 class = "aboutHeader">MYRES ABOUT US</h4>
 
         <P> We are a user-friendly platform that connects young people with places of residence during their study years. </P> <br>
@@ -190,6 +190,7 @@
           who share our vision of creating a platform that connects people 
           in a safe and secure environment throughout South Africa</p>
       </div>
+        </div>
     
   <!-- footer information -->
  <link rel="stylesheet" type="text/css" href="..\css_files\footer.css">
