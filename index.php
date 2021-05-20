@@ -181,7 +181,7 @@
 
         <br>
 
-        <div>
+        <div class ="bullets">
             <div class = "bullet" ></div>
             <span class= "bullet" ></span>
             <span class= "bullet" ></span>
