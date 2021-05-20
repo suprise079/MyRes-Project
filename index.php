@@ -12,9 +12,18 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
     <!-- Import res database -->
+<<<<<<< HEAD
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--font import-->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
+    
+
+=======
 
 
   
+>>>>>>> 0722106c09722a268e50dec3499a9ca4e164d35d
 </head>
 <body id="body">
     <header class="row">
@@ -36,7 +45,7 @@
     <!-- filters section -->
    <section id="filters">
       <form action="database\Filters.php" method="post">
-        <input type="submit" name="name" value="submit">
+        <input type="button" name="name" id="submit" value="submit">
         <!-- class 'refresh is used to reference filters in javascript for auto reload' -->
         <h3>Filters</h3>
 
@@ -44,13 +53,13 @@
 
         <!-- Locations based on campuses -->
         <div id="campuses" >
-                <input type="radio" id="apb" name="campus" value="APB" class="refresh">
+                <input type="radio" id="apb" name="campus" value="APB" class="refresh campus">
                 <label for="apb">APB</label><br>
-                <input type="radio" id="dfc" name="campus" value="DFC" class="refresh">
+                <input type="radio" id="dfc" name="campus" value="DFC" class="refresh campus">
                 <label for="dfc">DFC</label><br>
-                <input type="radio" id="apk" name="campus" value="APK" class="refresh">
+                <input type="radio" id="apk" name="campus" value="APK" class="refresh campus">
                 <label for="apk">APK</label><br>
-                <input type="radio" id="swc" name="campus" value="SWC" class="refresh">
+                <input type="radio" id="swc" name="campus" value="SWC" class="refresh campus">
                 <label for="swc">SWC</label>
         </div>
 
