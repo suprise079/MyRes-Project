@@ -134,7 +134,7 @@
     <!--  -->
     <hr style="clear: both;">
 
-
+     <h3>Recommended Accomodations</h3>
     
      <!--The Res SlideShow Pictures-->
     <div class ="ReSlideShow">
