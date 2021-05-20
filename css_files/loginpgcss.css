@@ -1,33 +1,12 @@
-/*-- footer{
-    
-    width: 100vh;
-    height: auto;
-    background: #243E61;
-    font-family: sans-serif;
-    color: white;
-    padding-top: 40px;
-} 
-
-html{
-    margin:0;
-    padding:0;
-    height:100vh;
-    width: 100%;
-}
-
-body{
-    margin:0;
-    padding:0;
-    height:100vh;
-    width: 100%;
-}*/
 
 
+/*Overall auto margin and auto content box sizing */
 *{
     margin: 0;
     box-sizing: border-box;
 }
 
+/* auto margin, family */
 body{
     font-family: sans-serif;
     line-height: 1.5;
@@ -35,23 +14,26 @@ body{
 
 }
 
-/*main{
-    width: 100%;
-}*/
 
 
-
-.Background-box{
-
+/*.Background-box{
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 1099;
     background-color:#e1dad8;
-}
+}  The grey container*/
+
+
+
+/* Overall img and forms containe*/
 
 .Background-box .Register-box{
     background-color:white;
-    width: 750px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -62,9 +44,10 @@ body{
 
 }
 
+/*Image Container and Image properties*/
 .Background-box .Register-box .img-area{
     flex: 0 0 50%;  
-    max-width: 50;
+    max-width: 40%;
     position: relative;
     background-size: cover;
 
@@ -84,45 +67,301 @@ body{
 
 }
 
+/*forms container size*/
 .Background-box .Register-box .form{
     flex: 0 0 50%;  
     padding: 30px;
-    max-width: 50%;
+    max-width: 100%;
+  
     
 }
 
-.Background-box .Register-box .form h1{
+
+/* ADD Residence Heading sizing, color */
+#mainheading{
     color: #1c467D;
     font-size: 30px;
-    margin: 0 0 30px;
+    margin-left: 45px;
+    margin-bottom: 50px;
+    font-size: 70px;
     font-family: 'Lobster', cursive;
 
 
 }
 
-.Background-box .box .form p1{
+.subheading {
+
+    color: #39b53f;
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+
+
+
+}
+
+
+/*.Background-box .box .form p1{
 
     color: rgb(194, 225, 162);
     opacity: 1;
     font-size: 14px;
 
+}*/
+
+
+/* forms input box sizing & design */
+
+.Background-box .Register-box .form .form-control{
+    border: none;
+    border-bottom: 1px solid rgb(126, 125, 125);
+
+    
+}
+
+.container {
+
+    margin-bottom: 30px;
+   
 }
 
 .form-control::-webkit-input-placeholder{
-    color: rgb(194, 225, 162);
+    color: rgb(105, 153, 56);
     opacity: 1;
-    font-size: 14px;
+    font-size: 17px;
 }
 
-.Background-box .Register-box .form .form-control{
-    color: #7ed956;
-    height: 45px;
-    margin-bottom: 30px;
-    width: 250px;
-    border: none;
-    border-bottom: 1px solid black;
-    display: flex;
+/*.Background-box .Register-box .form .form-control_right{*/
+   
     
+
+
+#name {
+    position: relative;
+    left: 10px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+}
+
+#email {
+    position: relative;
+    left: 10px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+}
+
+#telephone {
+    position: relative;
+    left: 10px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 0px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+}
+
+#label_description {
+    position: relative;
+    left: 500px;
+    top: -250px;
+  
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    color: rgb(105, 153, 56);
+    opacity: 1;
+}
+
+
+
+#description {
+    position: relative;
+    left: 500px;
+    top: -230px;
+    /*height: 55px;*/
+    margin-bottom: 0px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    border-width: 3px;
+    background-color: #e6e6e6;
+}
+
+h3 {
+    margin-top: -100px;
+    padding-bottom: 35px;
+}
+
+
+
+#physical_address {
+    position: relative;
+    left: 10px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+}
+
+#city {
+    position: relative;
+    left: 10px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    width: 20%;
+    display: flex;
+}
+
+
+
+#label_campus {
+    position: relative;
+    left: 500px;
+    top: -200px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    color: rgb(105, 153, 56);
+    opacity: 1;
+}
+
+#campus_select{
+    position: relative;
+    left: 500px;
+    top: -190px;
+    height: 30px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    background-color: #e6e6e6;
+
+}
+
+
+.campusoptions {
+    color: rgb(94, 187, 0);
+   
+}
+
+h4 {
+    margin-top: -65px;
+    padding-bottom: 35px;
+}
+
+#Nasfas_label {
+    position: relative;
+    left: 10px;
+    top: 0;
+    margin-left: 15%;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40%;
+    color: rgb(105, 153, 56);
+    
+}
+
+
+#NotAccredited_label {
+    position: relative;
+    left: 10px;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40%;
+    color: rgb(105, 153, 56);
+    
+}
+
+
+#price {
+    position: relative;
+    left: 10px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 0px;
+    margin-left: 15%;
+    width: 20%;
+    display: flex;
+
+}
+
+#label_room {
+    position: relative;
+    left: 500px;
+    top: -70px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    color: rgb(105, 153, 56);
+    opacity: 1;
+}
+
+#room_select{
+    position: relative;
+    left: 500px;
+    top: -60px;
+    height: 30px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    background-color: #e6e6e6;
+
+}
+
+
+.roomoptions {
+    color: rgb(94, 187, 0);
+   
+}
+
+h5 {
+    margin-top: -65px;
+    padding-bottom: 35px;
+}
+
+.upload-box{
+    margin-left: 120px;
+    font-size: 10px;
+    padding: 0px;
+    background:white;
+    border-radius: 50px;
+    border: rgb(0, 0, 0) 1px solid;
+    width: 270px;
+    outline: none;
+    color:black;
+    cursor: pointer;
+
+
+}
+
+::-webkit-file-upload-button{
+    color:white;
+    background: #7ed956;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px 1px #6b4559;
+    outline: none;
+    cursor: pointer;
+}
+
+::-webkit-file-upload-button:hover{
+    background: #1c467D;
+
 }
 
 .Background-box .Register-box .form .form-upload{
@@ -158,19 +397,88 @@ body{
     outline: none;
     cursor: pointer;
 }
+.Background-box .Register-box .form .error-text {
+    background: #F8D7DA;
+    text-align: center;
+    margin-left: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #a22020;
+    display: none;
+  
+
+}
+
+#regpassword {
+    position: relative;
+    left: 30px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 20px;
+    width: 490px;
+    display: flex;
+    
+}
+
+#confirmregpassword {
+    position: relative;
+    left: 30px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 490px;
+   
+}
+
+#password_show {
+    position: relative;
+    left: 650px;
+    top: -45px;
+    margin-left: 15%;
+    width: 40%;
+    display: flex;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+
+}
+
+#verify {
+    background: #1c467D;
+    margin-left: 50px;
+    padding: 5px;
+    margin-top: 0;
+    width: 300px;
+    border-radius: 7px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+    font-size: 25px;
+    cursor: no-drop;
+    opacity: 0.7;
+    -webkit-transition-property: transform;
+    transition-property:transform;
+    box-shadow: 0px 0px 10px black;
+    
+
+}
 
 
 .Register{
-    height: 45px;
+    height: 80px;
     /*margin-top: 30px;
     margin-bottom: 30px;*/
-    margin: 30px;
-    width: 200px;
+    position: relative;
+    left: 500px;
+    top: 50px;
+    width: 400px;
     background-color: #7ed956;
     border-radius: 7px;
     font-family: 'Staatliches', cursive;
     color:white;
-    font-size: 25px;
+    font-size: 45px;
     cursor: pointer;
     -webkit-transition-property: transform;
     transition-property:transform;
@@ -182,31 +490,21 @@ body{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+  
 
-::-webkit-file-upload-button:hover{
-    background: #1c467D;
-
-}
-    
-
-
-
-.Login:hover, .Register:focus, .Register:active{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-    
-
-.show-btn{
-    margin-left: 70%;
+.Loginshow-btn{
+    position: relative;
+    font-size: 35px;
+    left: 1200px;
+    top: 0px;
     height: 45px;
     width: 30%;
     border: none;
     background-color: transparent;
     font-family: 'Staatliches', cursive;
     cursor: pointer;
-    -webkit-transition-property: transform;
-    transition-property:transform;
+    /*-webkit-transition-property: transform;
+    transition-property:transform;*/
 }
 
 input[type = "checkbox"]{
@@ -220,13 +518,16 @@ input[type = "checkbox"]{
 
 .logincontainer{
     display: none ;
+    height: 500px;
     width: 350 px;
-    padding: 20px;
+    padding: 60px;
     border-radius: 4px;
-    background: #e1dad8;
-    border: 1px solid black;
+    background-color:#faf7f6;
+    border: 5px solid #1c467D;
 
 }
+
+
 
 .logincontainer{
     position: absolute;
@@ -239,24 +540,64 @@ input[type = "checkbox"]{
     position: absolute;
     right: 20px;
     top : 15px;
-    font-size: 25px;
+    font-size: 50px;
+    color: #1c467D;
     cursor: pointer;
 }
 
 #loginheading{
     color: #1c467D;
-    font-size: 30px;
+    font-size: 50px;
     margin: 0 0 30px;
     font-family: 'Lobster', cursive;
+    
 
 
 }
 
-.Background-box .Register-box .form .error-text {
-    background: #F8D7DA;
-  
-
+#loginemail {
+    background-color: #faf7f6;
+    position: relative;
+    left: 30px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 60px;
+    width: 80%;
+    display: flex;
 }
+
+#loginpassword {
+    background-color: #faf7f6;
+    position: relative;
+    left: 30px;
+    top: 0;
+    height: 55px;
+    margin-bottom: 15px;
+    width: 80%;
+    display: flex;
+}
+
+.loginsubmit {
+    height: 80px;
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 500px;
+    background-color: #7ed956;
+    border-radius: 7px;
+    font-family: 'Staatliches', cursive;
+    color:white;
+    font-size: 25px;
+    cursor: pointer;
+    -webkit-transition-property: transform;
+    transition-property:transform;
+    box-shadow: 0px 0px 10px black;
+}
+
+
+
 
 
 

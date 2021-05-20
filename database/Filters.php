@@ -41,9 +41,7 @@ if (isset($campus)) {
 if ($min_price > 0) {
   $sql = returnArray($sql);
   
-  $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Price_Accreditation >= '$min_price'");
-
-  
+  $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql and Price_Accreditation >= '$min_price'"); 
 
 }
 
@@ -81,7 +79,7 @@ function sqlToArray($sqlResult){
 
 $sql = returnArray($sql);
 
-/*Get accomodation information and convert to array for readability*/
+#Get accomodation information and convert to array for readability
 $results = mysqli_query($conn, "SELECT Res_ID FROM accomodation WHERE Res_ID in $sql");
 $results = sqlToArray($results);
 
@@ -89,8 +87,8 @@ $results = sqlToArray($results);
 $resNameDisplay = mysqli_query($conn, "SELECT Res_Name FROM accomodation WHERE Res_ID in $sql");
 $resNameDisplay = sqlToArray($resNameDisplay);
 
-//$pictures = $conn.mysqli_query($conn, "SELECT Pictures FROM accomodation WHERE Res_ID in $sql");
-//$pictures = sqlToArray($picture);
+#$pictures = $conn.mysqli_query($conn, "SELECT Pictures FROM accomodation WHERE Res_ID in $sql");
+#$pictures = sqlToArray($picture);
 
 $roomsDisplay = mysqli_query($conn, "SELECT Sharing FROM accomodation WHERE Res_ID in $sql");
 $roomsDisplay = sqlToArray($roomsDisplay);
@@ -101,15 +99,15 @@ $campusDisplay = sqlToArray($campusDisplay);
 $priceDisplay = mysqli_query($conn, "SELECT Price_Accreditation FROM accomodation WHERE Res_ID in $sql");
 $priceDisplay = sqlToArray($priceDisplay);
 
-/* Hard coded data for testing homePage profiles*/
+#Hard coded data for testing homePage profiles
 $photos = array('pictures\RichmondChill.jpeg', 'pictures\RichmondEnter.jpeg', 'pictures\RichmondOutside.jpeg', 'pictures\RichmondRooms.jpg', 'pictures\RichmondStudy.jpeg');
 
-/*Sample for testing resPage gallery */
+#Sample for testing resPage gallery
 $pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.jpeg', '..\pictures\RichmondOutside.jpeg', '..\pictures\RichmondRooms.jpg', '..\pictures\RichmondStudy.jpeg');
 
-/*include '..\index.php';*/
+#include '..\index.php';
 
-/*header("Location: ..\index.php?");*/
+#header("Location: ..\index.php?");
 
 
 ?>
