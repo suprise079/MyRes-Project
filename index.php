@@ -201,9 +201,9 @@
     </div> </div>
     <br>
     <div class="grouped_items">
-       <a href="">Privacy Policy | </a>
-       <a href="">Cookie Policy | </a>
-       <a href="">Terms & Conditions</a>
+       <a href="html_files\policies.html">Privacy Policy | </a>
+       <a href="html_files\policies.html">Cookie Policy | </a>
+       <a href="html_files\policies.html">Terms & Conditions</a>
     </div>
        <br>
        <p class="grouped_items" style="color: white">&copy; 2021 MyRes. All Rights Reserved </p>
