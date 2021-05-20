@@ -2,8 +2,9 @@
 
 
 error_reporting(E_ALL & ~E_WARNING);
-/* Get values of the filters*/
-/* initialising filters*/
+
+#Get values of the filters
+#initialising filters
 $campus = $_POST['campus'];
 $min_price = $_POST['minPrice'];
 $max_price = $_POST['maxPrice'];
@@ -68,7 +69,7 @@ if (isset($ratings)) {
 
 
 
-/*Covert sql result object into an array*/
+#Covert sql result object into an array
 function sqlToArray($sqlResult){
   $arr = [];
   while ($line = mysqli_fetch_array($sqlResult)) {

@@ -173,13 +173,17 @@
         <h4 class = "aboutHeader">MYRES ABOUT US</h4>
 
         <P> We are a user-friendly platform that connects young people with places of residence during their study years. </P> <br>
-        <p> We know that finding and renting out a place to stay can be a tedious experience so we have created a community where landlords list their properties on our platform , and young people visit our website to send an enquiry directly to the landlord  so that they can get to know each other before signing any documents.</p> <br>
+        <p> We know that finding and renting out a place to stay can be a tedious experience so we have created a community where landlords 
+          list their properties on our platform , and young people visit our website to send an enquiry directly to the landlord  so that 
+          they can get to know each other before signing any documents.</p> <br>
         <p> Our platform is totally free for landlords to list and for students to search </p> <br>
-        <p> Safety on our platform is super important to us. We require all users to add a profile picture, validate their cell phone number and email address and to provide their ID number, just to check that you’re chatting to the person you think  you are talking to. That said, we still encourage users just to make extra sure though before making any big decisions.
-        We’re building a community of students, 
-        tenants, landlords and partnered academic institutions
-        who share our vision of creating a platform that connects people 
-        in a safe and secure environment throughout South Africa</p>
+        <p> Safety on our platform is super important to us. We require all users to add a profile picture, validate their cell phone number 
+          and email address and to provide their ID number, just to check that you’re chatting to the person you think  you are talking to. 
+          That said, we still encourage users just to make extra sure though before making any big decisions.
+          We’re building a community of students, 
+          tenants, landlords and partnered academic institutions
+          who share our vision of creating a platform that connects people 
+          in a safe and secure environment throughout South Africa</p>
       </div>
     
   <!-- footer information -->
@@ -199,7 +203,7 @@
        <a href="">Terms & Conditions</a>
     </div>
        <br>
-       <P class="grouped_items" style="color: white"><img src="Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >  2021 MyRes. All Rights Reserved </P>
+       <p class="grouped_items" style="color: white">&copy; 2021 MyRes. All Rights Reserved </p>
   </footer>
 
 <script type="text/javascript" src="JavaScript_files\homePage.js"></script>
