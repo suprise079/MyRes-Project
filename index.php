@@ -185,6 +185,9 @@
             <div class = "bullet" ></div>
             <span class= "bullet" ></span>
             <span class= "bullet" ></span>
+            <span class= "bullet" ></span>
+            <span class= "bullet" ></span>
+            <span class= "bullet" ></span>
         </div>
       </div>
 
