@@ -37,7 +37,7 @@ header {
     width: 100px;
 }
 
-.header_links , .back_up{
+.header_links {
     border: 10px solid #272a4a;
     background-color: #E1DAD8;
     color:black;
@@ -45,6 +45,9 @@ header {
     text-decoration: none;
     height: 50px;
     padding-top: 3px;
+}
+.back_up{
+    text-decoration: none;
 }
 
 #Apply, #login{
