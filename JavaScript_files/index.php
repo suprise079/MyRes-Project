@@ -203,7 +203,7 @@
       </div>
         </div>
 
-        <a href=#resName class="back_up">^Back UP</a>
+        <a href=#about_us class="back_up">^Back UP</a>
     
   <!-- footer information -->
  <link rel="stylesheet" type="text/css" href="..\css_files\footer.css">
