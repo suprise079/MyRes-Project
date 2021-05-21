@@ -134,40 +134,36 @@
     <div class ="ReSlideShow">
 
         <div class="Res">
-            <div class="number fades">1 / 3</div>
+            <div class="number fades">1 / 5</div>
             <img src="pictures\Respublica.jpg" width = 100%>
-            <div class="caption">Caption Text</div>
+            <div class="caption">Republica Laundry Room</div>
           </div>
         
           <div class="Res">
-            <div class="number fades">2 / 3</div>
+            <div class="number fades">2 / 5</div>
             <img src="pictures\republica2.jpeg"  width = 100%>
-            <div class="caption">Caption Two</div>
+            <div class="caption">Republica Entrance</div>
           </div>
         
           <div class="Res">
-            <div class="number fades">3 / 3</div>
+            <div class="number fades">3 / 5</div>
             <img src="pictures\republica3.jpeg" width = 100% >
-            <div class="caption">Caption Three</div>
+            <div class="caption">Republica Play Room</div>
           </div>
 
           <div class="Res">
-            <div class="number fades">4 / 4</div>
+            <div class="number fades">4 / 5</div>
             <img src="pictures\republica4.jpeg" width = 100% >
-            <div class="caption">Caption Three</div>
+            <div class="caption">Republica Rooms</div>
           </div>
 
           <div class="Res">
             <div class="number fades">5 / 5</div>
-            <img src="pictures\republica5.jpeg" width = 100% >
-            <div class="caption">Caption Three</div>
+            <img src="pictures\republica6.jpeg" width = 100% >
+            <div class="caption">Repulica Swim Area</div>
           </div>
 
-          <div class="Res">
-            <div class="number fades">6 / 6</div>
-            <img src="pictures\republica6.jpeg" width = 100% >
-            <div class="caption">Caption Three</div>
-          </div>
+
 
 
 
