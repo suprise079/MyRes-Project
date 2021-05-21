@@ -134,7 +134,7 @@
     <div class ="ReSlideShow">
 
         <div class="Res">
-            <div class="number fades">1 / 5</div>
+            <!--<div class="number fades">1 / 5</div>-->
             <img src="pictures\Respublica.jpg" width = 100%>
             <div class="caption">Republica Laundry Room</div>
           </div>
