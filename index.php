@@ -27,12 +27,12 @@
            <span id="resName">MyRes</span>
        </div>
        <input type="text" id="searchRes" class="col-lg-1">
-       <a href="" class="col-lg-1"><img src="pictures\search2.png" id="searchSymbol"></a>
+       <a href="" class="col-lg-1" ><img src="pictures\search2.png" id="searchSymbol"></a>
        <!-- Added div to all links with 12 grid system -->
        <div class="row col-lg-6">
            <a href=#contacts class="header_links col-lg-3">Contacts</a>
            <a href=#about_us class="header_links col-lg-3">About us</a>
-           <button id="Apply" class="col-lg-3">Apply</button>
+           <button id="Apply" class="col-lg-3" >Apply</button>
            <button id="login" class="col-lg-3">Login</button>
        </div>
     </header>
