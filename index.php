@@ -33,6 +33,7 @@
            <a href=#contacts class="header_links col-lg-3">Contacts</a>
            <a href=#about_us class="header_links col-lg-3">About us</a>
            <button id="Apply" class="col-lg-3">Apply</button>
+           <button id="login" class="col-lg-3">Login</button>
        </div>
     </header>
     
