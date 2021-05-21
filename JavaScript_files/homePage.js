@@ -29,6 +29,7 @@ function rangeInput(){
 	}
 }
 
+
 /* enable each filter change to refersh the reses container*/
 /*filters = document.getElementsByClassName('grefresh');
 console.log(filters);
