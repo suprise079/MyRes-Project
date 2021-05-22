@@ -32,14 +32,17 @@
        <div class="row col-lg-6">
            <a href=#contacts class="header_links col-lg-3">Contacts</a>
            <a href=#about_us class="header_links col-lg-3">About us</a>
-           <button id="Apply" class="col-lg-3">Apply</button>
+           <a href="" id="Apply" class="col-lg-3">Apply</a>
+           <button id="login" class="col-lg-3">Login</button>
+
        </div>
     </header>
+    <?php require 'php_files/login.php'; ?>
     
     <!-- filters section -->
    <section id="filters">
       <form action="index.php" method="post">
-        <input type="submit" name="name" id="submit" value="submit">
+        
         <!-- class 'refresh is used to reference filters in javascript for auto reload' -->
         <h3>Filters</h3>
 
@@ -93,6 +96,11 @@
           <br>
           <input type="radio" id="1star" name="ratings" class="refresh">
           <label for="1star">&#9733</label>
+          <br>
+          <hr>
+          <div style="width: 100%; text-align: center;"><!-- div element to position the button in the center -->
+            <input type="submit" name="name" id="submitFilters" value="submit">
+          </div>
       </form>
     </section>
 
