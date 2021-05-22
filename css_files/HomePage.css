@@ -46,8 +46,17 @@ header {
     height: 50px;
     padding-top: 3px;
 }
+.back_up{
+    text-decoration: none;
+    text-align: center;
+    margin-left:50%;
+}
 
+<<<<<<< HEAD
 #Apply, #login {
+=======
+#Apply, #login{
+>>>>>>> 0772c8dffb516a43f71ce0f3c2ce7dbc623656b2
     background-color: #7ED956;
     border: 10px solid #272a4a;
     height: 50px;
@@ -201,38 +210,20 @@ h4 {
     max-width: 60%;
     margin: auto;
     position: relative;
+    background-color:  #E1DAD8;
 }
 .Res{
     display: none;
+    background-color: #E1DAD8 ;
 }
 .Res img {
     width: 99%;
     height: 400px;
+    background-color:  #E1DAD8;
 }
 
-.before, .after{
-    cursor: pointer;
-    position: absolute;
-    top:50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-size: 18px;
-    transition: 0,6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-.after{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-
-}
-.before:hover, .after:hover{
-    background-color: rgb(0,0,0,0,8);
-}
 .caption{
-    color: #f2f2f2;
+    color: white;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -240,14 +231,6 @@ h4 {
     width: 100%;
     text-align: center;
 }
-
-.number{
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
 
 .bullet{
   cursor: pointer;
