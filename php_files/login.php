@@ -1,13 +1,17 @@
 
 <title>Sign In</title>
-
+<!-- import jquery -->
+<script type="text/javascript" src="JavaScript_files\jquery.js"></script>
 <!-- main css for the page -->
-<link rel="stylesheet" href="../css_files/login.css">
+<link rel="stylesheet" href="css_files/login.css">
+<!-- Bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
 
 
 <section id="signIn"> <!-- sing in form pop-pop -->
-    <script type="text/javascript">$("#signIn").hide();</script>
+    <!-- <script type="text/javascript">$("#signIn").hide();</script> -->
     <div id="signBg"></div> <!-- Blur the background -->
+    <div id="errors"></div>
     <div id="signForm"> <!-- inner container for the form -->
         <button id="back">&#10140</button>
         <button id="close">&#10006</button>
@@ -37,4 +41,4 @@
     </div>
 </section>
 
-<script type="text/javascript" src="../JavaScript_files/login.js"></script>
+<script type="text/javascript" src="JavaScript_files/login.js"></script>
