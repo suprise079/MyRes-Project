@@ -16,27 +16,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
-    
   
 </head>
 <body id="body">
     <header class="row">
         <!-- Added div to align logo picture and comapny name -->
-        <div class="col-lg-3">
-           <img src="pictures\logoNew.jpeg" id="logoImg"> 
-           <span id="resName">MyRes</span>
-       </div>
-       <input type="text" id="searchRes" class="col-lg-1">
-       <a href="" class="col-lg-1" ><img src="pictures\search2.png" id="searchSymbol"></a>
-       <!-- Added div to all links with 12 grid system -->
-       <div class="row col-lg-6">
-           <a href=#contacts class="header_links col-lg-3">Contacts</a>
-           <a href=#about_us class="header_links col-lg-3">About us</a>
-           <a href="" id="Apply" class="col-lg-3">Apply</a>
-           <button id="login" class="col-lg-3">Login</button>
+      <div class="col-lg-3">
+        <img src="pictures\logoNew.jpeg" id="logoImg"> 
+        <span id="resName">MyRes</span>
+      </div>
+      <input type="text" id="searchRes" class="col-lg-1">
+      <a href="" class="col-lg-1" ><img src="pictures\search2.png"id="searchSymbol"></a>
+      <!-- Added div to all links with 12 grid system -->
+      <div class="row col-lg-6">
+        <a href=#contacts class="header_links col-lg-3">Contacts</a>
+        <a href=#about_us class="header_links col-lg-3">About us</a>
+        <a href="" id="Apply" class="col-lg-3">Apply</a>
+        <button id="login" class="col-lg-3">Login</button>
        </div>
     </header>
-    <?php require 'php_files/login.php'; ?>
+
+<?php require 'php_files\login.php'; ?>
     
     <!-- filters section -->
    <section id="filters">
@@ -164,11 +164,6 @@
             <img src="pictures\republica6.jpeg" width = 100% >
             <div class="caption">Repulica Swim Area</div>
           </div>
-
-
-
-
-
 
 
         

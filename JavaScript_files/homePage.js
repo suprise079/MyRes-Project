@@ -29,6 +29,11 @@ function rangeInput(){
 	}
 }
 
+/* login button click funtionality */
+$("#login").click(function(){
+	$("#signIn").show(600, 'swing');
+})
+
 
 /* enable each filter change to refersh the reses container*/
 /*filters = document.getElementsByClassName('grefresh');

@@ -1,81 +1,102 @@
-
-
-
-.logincontainer{
-    height: 500px;
-    width: 350 px;
-    padding: 60px;
-    border-radius: 4px;
-    background-color:#faf7f6;
-    border: 5px solid #1c467D;
-
+/* makes the background look blur */
+#signBg {
+    background-color: #E1DAD8;
+    opacity: 70%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
-
-
-.logincontainer{
-    position: absolute;
-    top : 60%;
-    left : 50%;
-    transform: translate(-50%, -50%);
+/* Container for the login form */
+#signForm {
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    background-color: grey;
+    border: 2px dotted #272a4a;
 }
 
-.logincontainer .close-btn{
-    position: absolute;
-    right: 20px;
-    top : 15px;
-    font-size: 50px;
-    color: #1c467D;
-    cursor: pointer;
+#back {
+  background-color: transparent;
+  border: none;
+  transform: rotate(180deg) scale(1.5);
+  position: relative;
+  right: 45%;
+  color: #7ed956;
 }
 
-#loginheading{
-    color: #1c467D;
-    font-size: 50px;
-    margin: 0 0 30px;
+#close {
+  position: relative;
+  left: 45%;
+  margin-bottom: 30px;
+  border: none;
+  background-color: transparent;
+  color: green;
+}
+
+#close:hover{
+  background-color: #d21111;
+}
+
+#logoImg {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#resName {
+    font-size: 46px;
+    color: white;
     font-family: 'Lobster', cursive;
-    
-
-
 }
 
-#loginemail {
-    background-color: #faf7f6;
+#email_show {
+    background-color: #E1DAD8;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+.signInput {
+    height: 45px;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.signBtn {
+    width: 100%;
+    height: 45px;
+    background-color: #7ED956;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+hr {
     position: relative;
-    left: 30px;
-    top: 0;
-    height: 55px;
-    margin-bottom: 60px;
-    width: 80%;
-    display: flex;
+    top: 12px;
 }
 
-#loginpassword {
-    background-color: #faf7f6;
-    position: relative;
-    left: 30px;
-    top: 0;
-    height: 55px;
-    margin-bottom: 15px;
-    width: 80%;
-    display: flex;
+/* css for sign up button */
+
+#signUp {
+    width: 100%;
+    height: 45px;
+    padding-top: 10px;
+    background-color: #E1DAD8;
+    color:black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display:block;
+    margin-top: 20px;
 }
 
-.loginsubmit {
-    height: 80px;
-    /*margin-top: 30px;
-    margin-bottom: 30px;*/
-    position: relative;
-    left: 0px;
-    top: 0px;
-    width: 500px;
-    background-color: #7ed956;
-    border-radius: 7px;
-    font-family: 'Staatliches', cursive;
-    color:white;
-    font-size: 25px;
-    cursor: pointer;
-    -webkit-transition-property: transform;
-    transition-property:transform;
-    box-shadow: 0px 0px 10px black;
-}

@@ -1,28 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="../css_files/login.css">
-</head>
-<body>
+<title>Sign In</title>
 
-    <div class = "logincontainer">
-                        
-        <label for = "show" class = "close-btn" title ="close" >&times;</label>
-        <h2 id = "loginheading">Welcome Back</h2>
-        
-        <form id = "loginForm"  action = "..\php\connection.php" method = "get">
-                <input type = "text" placeholder = "Email" class = "form-control" id = "loginemail" name = "loginemail">
-                <input type = "text" placeholder = "Password" class = "form-control" id = "loginpassword" name = "loginpassword">
-                
-                <button type = "submit" name = "submit" class = "loginsubmit">Submit</button>
+<!-- main css for the page -->
+<link rel="stylesheet" href="../css_files/login.css">
+
+
+<section id="signIn"> <!-- sing in form pop-pop -->
+    <script type="text/javascript">$("#signIn").hide();</script>
+    <div id="signBg"></div> <!-- Blur the background -->
+    <div id="signForm"> <!-- inner container for the form -->
+        <button id="back">&#10140</button>
+        <button id="close">&#10006</button>
+        <div class="row" style="justify-content: center;"> <!-- name and logo -->
+          <img src="pictures\logoNew.jpeg" id="logoImg" class="col-lg-2" > 
+          <span id="resName" class="col-lg-2">MyRes</span>
+        </div>
+        <form>  <!-- sign in form -->
+          <!-- email and next button container -->
+          <div id="email_next">
+            <input type="text" class="signInput" name="email" id="email" required placeholder="Email or usernanme"></input><br>
+            <input type="button" id="next" class="signBtn" value="Next">
+          </div>
+          <!-- password and signIn button -->
+          <div id="pass_submit">
+            <div id="email_show"></div> <!-- display email -->
+            <input type="text" class="signInput" name="password" placeholder="Password" required><br>
+            <input type="submit" name="password" class="signBtn" value="Sign In">
+          </div>  
+          <div class="row" style="margin-top: 20px"> <!-- separator -->
+            <hr class="col-lg-5 col-md-5 col-sm-5">
+            <span class="col-lg-2 col-md-2 col-sm-2">or</span>
+            <hr class="col-lg-5 col-md-5 col-sm-5">
+          </div>
+          <a href="" id="signUp">Sign Up</a>
         </form>
-                        
     </div>
+</section>
 
-</body>
-</html>
+<script type="text/javascript" src="../JavaScript_files/login.js"></script>
