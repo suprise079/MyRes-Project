@@ -9,7 +9,7 @@
 
 
 <section id="signIn"> <!-- sing in form pop-pop -->
-    <!-- <script type="text/javascript">$("#signIn").hide();</script> -->
+    <script type="text/javascript">$("#signIn").hide();</script>
     <div id="signBg"></div> <!-- Blur the background -->
     <div id="errors"></div>
     <div id="signForm"> <!-- inner container for the form -->
@@ -22,21 +22,23 @@
         <form>  <!-- sign in form -->
           <!-- email and next button container -->
           <div id="email_next">
+            <i class="fa fa-user icon"></i>
             <input type="text" class="signInput" name="email" id="email" required placeholder="Email or usernanme"></input><br>
             <input type="button" id="next" class="signBtn" value="Next">
           </div>
           <!-- password and signIn button -->
           <div id="pass_submit">
             <div id="email_show"></div> <!-- display email -->
+            <i class="fa fa-lock icon"></i>
             <input type="text" class="signInput" name="password" placeholder="Password" required><br>
-            <input type="submit" name="password" class="signBtn" value="Sign In">
+            <input type="button" id="submit" class="signBtn" value="Sign In">
           </div>  
           <div class="row" style="margin-top: 20px"> <!-- separator -->
             <hr class="col-lg-5 col-md-5 col-sm-5">
             <span class="col-lg-2 col-md-2 col-sm-2">or</span>
             <hr class="col-lg-5 col-md-5 col-sm-5">
           </div>
-          <a href="" id="signUp">Sign Up</a>
+          <a href="php_files\registration.php" id="signUp">Sign Up</a>
         </form>
     </div>
 </section>

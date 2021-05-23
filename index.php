@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
     <!-- main CSS file for this page -->
     <link rel="stylesheet" href="css_files\HomePage.css">
     <!-- Bootstrap css -->
@@ -16,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
+
   
 </head>
 <body id="body">
@@ -31,7 +31,7 @@
       <div class="row col-lg-6">
         <a href=#contacts class="header_links col-lg-3">Contacts</a>
         <a href=#about_us class="header_links col-lg-3">About us</a>
-        <a href="" id="Apply" class="col-lg-3">Apply</a>
+        <a href="php_files\registration.php" id="Apply" class="col-lg-3">Apply</a>
         <button id="login" class="col-lg-3">Login</button>
        </div>
     </header>
@@ -108,6 +108,7 @@
       <!-- Import database for displaying reses -->
       <?php require "database\Filters.php";
             $counter = 0;
+            $dict = array('Yes' => 'Sharing', 'No' => 'Single');
       ?>
 
       <!-- Looping through all reses found on database that match filter -->
@@ -121,7 +122,7 @@
             <?php $link =  "href='php_files/resPage.php?ID=$id'" ?>
             <img <?php echo $photo; ?> > <!-- Picture of specific res -->
             <div id="res_title"><?php echo $resNameDisplay[$counter]; ?> </div> <!-- Name of res -->
-            <div class="res_info"><?php echo $roomsDisplay[$counter] ?></div>  <!-- Number of sharing -->
+            <div class="res_info"><?php echo $dict[$roomsDisplay[$counter]] ?></div>  <!-- Number of sharing -->
             <div class="res_info"><?php echo $campusDisplay[$counter]; ?></div>  <!-- Location of the res -->
             <div class="res_info"><?php echo "R".$priceDisplay[$counter]; ?></div>  <!-- price of the res -->
             <div class="view_acc"><a <?php echo $link ?> class="view_acc">View Accomodation</a></div>  <!-- Link to view more about the res -->

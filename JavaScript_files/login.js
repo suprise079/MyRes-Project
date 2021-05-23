@@ -36,6 +36,11 @@ $("#back").click(function(){
 	$("#back").hide(500, "swing");
 })
 
+/* funtion will send data to php and re-direct to profile page*/
+$("#submit").click(function(){
+	location.replace("./php_files/profile.php");
+})
+
 $("#close").click(function(){
 	$("#signIn").hide(500, "swing");
 })
