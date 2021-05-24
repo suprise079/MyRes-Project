@@ -4,8 +4,6 @@
 
 #body {
     background-color: #E1DAD8;
-    
-
 }
 
 header {
@@ -14,6 +12,17 @@ header {
     align-items: center;
     background-color: #272a4a;  
     position: sticky;
+}
+
+#form {
+    position: relative;
+}
+
+#searchSymbol {
+    position: relative;
+    right: 500px;
+    top: 10px;
+    transform: scale(1.2);
 }
 
 #logoImg {
@@ -33,10 +42,6 @@ header {
     border-radius: 15px;
 }
 
-#searchSymbol {
-    width: 100px;
-}
-
 .header_links {
     border: 10px solid #272a4a;
     background-color: #E1DAD8;
@@ -52,11 +57,8 @@ header {
     margin-left:50%;
 }
 
-<<<<<<< HEAD
+
 #Apply, #login {
-=======
-#Apply, #login{
->>>>>>> 0772c8dffb516a43f71ce0f3c2ce7dbc623656b2
     background-color: #7ED956;
     border: 10px solid #272a4a;
     height: 50px;
@@ -65,6 +67,7 @@ header {
     text-decoration: none;
     
 }
+
 
 #submitFilters {
     background-color: #7ED956;

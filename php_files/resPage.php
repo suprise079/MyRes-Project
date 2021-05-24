@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="..\css_files\Bootstrap_css\bootstrap-grid.css">
     <!-- street view api -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
 <body>
@@ -71,17 +73,43 @@
         <br>
 
 
-        <!--Review section-->
+        <!-- ratings testing -->
+        <div class="col-md-4 rate-input">
+            <div>
+                <span class="fa fa-star" name="1" id="1" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
+                <span class="fa fa-star" name="1" id="2" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
+                <span class="fa fa-star" name="1" id="3" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
+                <span class="fa fa-star" name="1" id="4" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
+                <span class="fa fa-star" name="1" id="5" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
+                
+            </div><br>
+            <form action="" method="post">
+                <input type="hidden" name="rateID" id="rateID" value="1">
+                <input type="text" name="email" id="email" placeholder="Email"><br><br>
+                <textarea rows="5" placeholder="Enter review here..." name="comment" id="comment" required=""></textarea><br>
+                <button name="submit" id="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+        <!--Review section
         <div id="reviews-container">  
             
             <h2>Reviews</h2>
 
 
-            <!--Write review button-->
+            Write review button
 			<button id="writeReview" onclick="change()">Write Review </button>
 
 
-                <!--Review Form-->
+                Review Form
 				<div id="form" class="form">
 					<hr>
 					<form id="reviewForm" name="addReview">
@@ -98,7 +126,7 @@
 						<input type="text" id="revDes" ><br><br>
 						
 
-                        <!--Review Submit button-->
+                        Review Submit button
 						<button id="send" type="submit" value="Send"> Submit </button>
 			
 					</form>
@@ -106,12 +134,12 @@
 				</div>
 
 
-                <!--Review Output container-->
+                Review Output Container
 				<div id="review-results"> 
 					<hr>
 					
 				</div>
-
+ -->
         </div>
         
     </main>

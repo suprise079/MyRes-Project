@@ -1,7 +1,7 @@
 <?php
 
 
-error_reporting(0);
+error_reporting();
 
 #Get values of the filters
 #initialising filters
@@ -10,6 +10,7 @@ $min_price = $_POST['minPrice'];
 $max_price = $_POST['maxPrice'];
 $rooms = $_POST['rooms'];
 $ratings = $_POST['ratings'];
+$res = $_POST['resName'];
 
 #import sql database
 
@@ -31,8 +32,14 @@ function returnArray($sql){
   return $rows;
 }
 
+if (isset($res)) {
+  $sql = returnArray($sql);
 
-if (isset($campus)) {
+  $sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Res_Name like '%$res%'");
+
+}
+else{
+  if (isset($campus)) {
   $sql = returnArray($sql);
 
   $sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Campus = '$campus'");
@@ -66,6 +73,8 @@ if (isset($ratings)) {
   $sql = mysqli_query($conn,"SELECT Res_ID FROM accomodation WHERE Res_ID in $sql");
 
 }
+}
+
 
 
 
@@ -85,8 +94,8 @@ $results = mysqli_query($conn, "SELECT Res_ID FROM accomodation WHERE Res_ID in 
 $results = sqlToArray($results);
 
 
-$resNameDisplay = mysqli_query($conn, "SELECT Res_Name FROM accomodation WHERE Res_ID in $sql");
-$resNameDisplay = sqlToArray($resNameDisplay);
+$nameDisplay = mysqli_query($conn, "SELECT Res_Name FROM accomodation WHERE Res_ID in $sql");
+$nameDisplay = sqlToArray($nameDisplay);
 
 #$pictures = $conn.mysqli_query($conn, "SELECT Pictures FROM accomodation WHERE Res_ID in $sql");
 #$pictures = sqlToArray($picture);
@@ -106,7 +115,9 @@ $photos = array('pictures\RichmondChill.jpeg', 'pictures\RichmondEnter.jpeg', 'p
 #Sample for testing resPage gallery
 $pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.jpeg', '..\pictures\RichmondOutside.jpeg', '..\pictures\RichmondRooms.jpg', '..\pictures\RichmondStudy.jpeg');
 
+$jquery_data[] = array($results, $nameDisplay, $roomsDisplay, $campusDisplay, $photos);
 
+echo json_encode($jquery_data);
 
 
 ?>
