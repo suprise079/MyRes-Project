@@ -15,6 +15,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--font import-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- search and icon sysmbols -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
 </head>
@@ -25,10 +27,9 @@
         <img src="pictures\logoNew.jpeg" id="logoImg"> 
         <span id="resName">MyRes</span>
       </div>
-      <input type="text" id="searchRes" class="col-lg-1">
-      <a href="" class="col-lg-1" ><img src="pictures\search2.png"id="searchSymbol"></a>
+      <input type="text" id="searchRes" name="resName" placeholder="Search here..." class="col-lg-3">
       <!-- Added div to all links with 12 grid system -->
-      <div class="row col-lg-6">
+      <div class="row col-lg-6" style="padding-left: 7%;">
         <a href=#contacts class="header_links col-lg-3">Contacts</a>
         <a href=#about_us class="header_links col-lg-3">About us</a>
         <a href="php_files\registration.php" id="Apply" class="col-lg-3">Apply</a>
@@ -42,41 +43,41 @@
    <section id="filters">
       <form action="index.php" method="post">
         
-        <!-- class 'refresh is used to reference filters in javascript for auto reload' -->
+        <!-- class 'load is used to reference filters in javascript for auto reload' -->
         <h3>Filters</h3>
 
         <h4>Location</h4>
 
         <!-- Locations based on campuses -->
         <div id="campuses" >
-                <input type="radio" id="apb" name="campus" value="APB" class="refresh campus">
+                <input type="radio" id="apb" name="campus" value="APB" class="load campus">
                 <label for="apb">APB</label><br>
-                <input type="radio" id="dfc" name="campus" value="DFC" class="refresh campus">
+                <input type="radio" id="dfc" name="campus" value="DFC" class="load campus">
                 <label for="dfc">DFC</label><br>
-                <input type="radio" id="apk" name="campus" value="APK" class="refresh campus">
+                <input type="radio" id="apk" name="campus" value="APK" class="load campus">
                 <label for="apk">APK</label><br>
-                <input type="radio" id="swc" name="campus" value="SWC" class="refresh campus">
+                <input type="radio" id="swc" name="campus" value="SWC" class="load campus">
                 <label for="swc">SWC</label>
         </div>
 
         <hr>
         <!-- choose price filter -->
         <h4>Price Ranges</h4>
-        <input type="text" placeholder="Minimum Price" id="minPrice" name="minPrice" class="price refresh" onmousedown="minPrice()">
-        <input type="text" placeholder="Maximum Price" id="maxPrice" name="maxPrice" class="price refresh" onmousedown="maxPrice()">
+        <input type="text" placeholder="Minimum Price" id="minPrice" name="minPrice" class="price load">
+        <input type="text" placeholder="Maximum Price" id="maxPrice" name="maxPrice" class="price load">
         <br>
         <input type="range" min="100" max="10000" value="5000" id="priceRange" oninput="rangeInput()">
 
         <hr>
         <!-- Choosing the prefferd number of rooms -->
         <h4>Rooms</h4>
-        <input type="radio" id="single" name="rooms" value="Yes" class="refresh">
+        <input type="radio" id="single" name="rooms" value="Yes" class="rooms load">
         <label for="single">Sharing</label>
         <br>
-        <input type="radio" id="sharing2" name="rooms" value="No" class="refresh">
+        <input type="radio" id="sharing2" name="rooms" value="No" class="rooms load">
         <label for="sharing2">Single</label>
         <br>
-        <!-- <input type="radio" id="sharing3" name="rooms" class="refresh">
+        <!-- <input type="radio" id="sharing3" name="rooms" class="load">
         <label for="sharing3">Sharing(4-8)</label>
         <br> -->
 
@@ -84,16 +85,16 @@
         <!-- Options to choose to choose acoording to rating -->
         <h4>Student Ratings</h4>
         <!-- Star ratings -->
-          <input type="radio" id="5star" name='ratings' class="refresh">
+          <input type="radio" id="5star" name='ratings' class="load">
           <label for="5star">&#9733 &#9733 &#9733 &#9733 &#9733</label>
           <br>
-          <input type="radio" id="4star" name="ratings" class="refresh">
+          <input type="radio" id="4star" name="ratings" class="load">
           <label for="4star">&#9733 &#9733 &#9733 &#9733</label>
           <br>
-          <input type="radio" id="3star" name="ratings" class="refresh">
+          <input type="radio" id="3star" name="ratings" class="load">
           <label for="3star">&#9733 &#9733 &#9733</label>
           <br>
-          <input type="radio" id="1star" name="ratings" class="refresh">
+          <input type="radio" id="1star" name="ratings" class="load">
           <label for="1star">&#9733</label>
           <br>
           <hr>
@@ -105,31 +106,7 @@
 
     <!-- section for displaying all reses using 12-grid bootstrap -->
     <section id="searchResults" class="row">
-      <!-- Import database for displaying reses -->
-      <?php require "database\Filters.php";
-            $counter = 0;
-            $dict = array('Yes' => 'Sharing', 'No' => 'Single');
-      ?>
-
-      <!-- Looping through all reses found on database that match filter -->
-      <?php foreach ($results as $id) { ?>
-
-        <!-- Container for each res displayed -->
-       <article class="res_container col-lg-4 col-md-4 col-sm-6 col-xs-12">
-       
-
-            <?php $photo = "src=".$photos[0]." alt='ResPicture' class='displayPic'";?>
-            <?php $link =  "href='php_files/resPage.php?ID=$id'" ?>
-            <img <?php echo $photo; ?> > <!-- Picture of specific res -->
-            <div id="res_title"><?php echo $resNameDisplay[$counter]; ?> </div> <!-- Name of res -->
-            <div class="res_info"><?php echo $dict[$roomsDisplay[$counter]] ?></div>  <!-- Number of sharing -->
-            <div class="res_info"><?php echo $campusDisplay[$counter]; ?></div>  <!-- Location of the res -->
-            <div class="res_info"><?php echo "R".$priceDisplay[$counter]; ?></div>  <!-- price of the res -->
-            <div class="view_acc"><a <?php echo $link ?> class="view_acc">View Accomodation</a></div>  <!-- Link to view more about the res -->
-            <?php $counter += 1; ?>
-
-       </article>
-      <?php  }?>
+ 
         
     </section>
     

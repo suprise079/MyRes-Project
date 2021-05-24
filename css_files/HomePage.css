@@ -4,8 +4,6 @@
 
 #body {
     background-color: #E1DAD8;
-    
-
 }
 
 header {
@@ -14,6 +12,17 @@ header {
     align-items: center;
     background-color: #272a4a;  
     position: sticky;
+}
+
+#form {
+    position: relative;
+}
+
+#searchSymbol {
+    position: relative;
+    right: 500px;
+    top: 10px;
+    transform: scale(1.2);
 }
 
 #logoImg {
@@ -31,10 +40,6 @@ header {
     width: 200px;
     height: 35px;
     border-radius: 15px;
-}
-
-#searchSymbol {
-    width: 100px;
 }
 
 .header_links {
@@ -99,7 +104,7 @@ header {
 }
 
 /*Res title for all reses*/
-#res_title {
+.res_title {
   font-size: 2em;
   color: white;
   text-align:center;

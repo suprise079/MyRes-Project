@@ -19,7 +19,7 @@
           <img src="pictures\logoNew.jpeg" id="logoImg" class="col-lg-2" > 
           <span id="resName" class="col-lg-2">MyRes</span>
         </div>
-        <form>  <!-- sign in form -->
+        <form method="post">  <!-- sign in form -->
           <!-- email and next button container -->
           <div id="email_next">
             <i class="fa fa-user icon"></i>
@@ -30,7 +30,7 @@
           <div id="pass_submit">
             <div id="email_show"></div> <!-- display email -->
             <i class="fa fa-lock icon"></i>
-            <input type="text" class="signInput" name="password" placeholder="Password" required><br>
+            <input type="text" class="signInput" id="password" placeholder="Password" required><br>
             <input type="button" id="submit" class="signBtn" value="Sign In">
           </div>  
           <div class="row" style="margin-top: 20px"> <!-- separator -->

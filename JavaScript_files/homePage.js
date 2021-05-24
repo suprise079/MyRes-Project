@@ -1,6 +1,8 @@
+$(document).ready(function(){
+
 //global variable to determine which price is selected
 priceSelector = true;	//true edits min and false edits max 
-console.log('javascript');
+console.log('javascript this is me');
 
 
 //set range input to edit min price
@@ -34,31 +36,77 @@ $("#login").click(function(){
 	$("#signIn").show(600, 'swing');
 })
 
-
-/* enable each filter change to refersh the reses container*/
-/*filters = document.getElementsByClassName('grefresh');
-console.log(filters);
-
-for (i of filters) {
-  i.addEventListener('change', function() {
-    document.getElementById("searchResults").innerHTML.reload;
-    console.log("reloaded")
-  });
+function make(value, clas, element){
+	ele = document.createElement(element);
+	ele.className = clas;
+	ele.innerHTML = value;
+	return ele;
 }
 
-$(document).ready(function(){
-	$("#submit").click(function(){
-		console.log("clicked");
-		var results = array();
-		campus = $(".campus:checked").val();
-		$.post("./database/Filters.php",
-			{name:campus},
-			function(data){
-				console.log("running");
-				results = data;
-				console.log(data);
-			})
-		console.log("saved results: "+results);
-	})
-})*/
-	
+function Reses(){
+	console.log("clicked");
+	resName = $("#searchRes").val();
+	campus = $(".campus:checked").val();
+	min_price = $('#minPrice').val();
+	max_price = $('#maxPrice').val();
+	rooms = $(".rooms:checked").val();
+	ratings = $("input[name='ratings']").val();
+	$("#searchResults").empty();
+	$.post("./database/Filters.php",
+		{'campus':campus, 'minPrice':min_price, 'maxPrice': max_price, 'rooms':rooms, 'ratings':ratings, 'resName':resName},
+		function(data){
+			results = JSON.parse(data);
+			
+			for (var i = 0; i < results[0][0].length; i++) {
+				/* create and place photo for the specific res*/
+				photo = document.createElement('img');
+				photo.className = 'displayPic';
+				photo.setAttribute('src', results[0][5][0]);
+
+				/* create information divs*/
+				Dname = make(results[0][1][i], 'res_title', 'div')
+				Drooms = make(results[0][2][i], 'res_info', 'div')
+				Dcampus = make(results[0][3][i], 'res_info', 'div');
+				Dprice = make(results[0][4][i], 'res_info', 'div');
+
+				/* create link for viewing and res and pass on res ID*/
+				link = "php_files/resPage.php?ID="+results[0][0][i];
+				view = make("View Accomodation", "view_acc", 'a')
+				view.setAttribute('href', link);
+				view_div = make("", 'view_acc', 'div');
+				view_div.append(view);
+				
+				accomodation = document.createElement("article");
+				accomodation.className = 'res_container col-lg-4 col-md-4 col-sm-6 col-xs-12'
+				accomodation.append(photo);
+				accomodation.append(Dname);
+				accomodation.append(Drooms);
+				accomodation.append(Dcampus);
+				accomodation.append(Dprice);
+				accomodation.append(view_div);
+
+				$("#searchResults").append(accomodation);
+				console.log(($("#searchResults")))
+			}
+		}
+	)
+}
+
+$("#searchRes").on('propertychange input', function(){Reses()});
+
+Reses();
+
+
+/* enable each filter change to refersh the reses container*/
+inputs = document.querySelectorAll(".load");
+
+
+
+console.log(inputs);
+inputs.forEach((element) =>{
+	console.log(element)
+	element.addEventListener('click',function(){Reses()})
+})
+
+})
+
