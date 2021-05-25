@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 //global variable to determine which price is selected
 priceSelector = true;	//true edits min and false edits max 
+
 console.log('javascript this is me');
 
 
@@ -44,7 +45,7 @@ function make(value, clas, element){
 }
 
 function Reses(){
-	console.log("clicked");
+	empty = "yes";
 	resName = $("#searchRes").val();
 	campus = $(".campus:checked").val();
 	min_price = $('#minPrice').val();
@@ -52,12 +53,17 @@ function Reses(){
 	rooms = $(".rooms:checked").val();
 	ratings = $("input[name='ratings']").val();
 	$("#searchResults").empty();
+
+	
 	$.post("./database/Filters.php",
 		{'campus':campus, 'minPrice':min_price, 'maxPrice': max_price, 'rooms':rooms, 'ratings':ratings, 'resName':resName},
 		function(data){
 			results = JSON.parse(data);
 			
 			for (var i = 0; i < results[0][0].length; i++) {
+				empty = "no";
+        
+				$("article").delay("slow").fadeIn(50000);
 				/* create and place photo for the specific res*/
 				photo = document.createElement('img');
 				photo.className = 'displayPic';
@@ -65,6 +71,8 @@ function Reses(){
 
 				/* create information divs*/
 				Dname = make(results[0][1][i], 'res_title', 'div')
+
+
 				Drooms = make(results[0][2][i], 'res_info', 'div')
 				Dcampus = make(results[0][3][i], 'res_info', 'div');
 				Dprice = make(results[0][4][i], 'res_info', 'div');
@@ -85,11 +93,16 @@ function Reses(){
 				accomodation.append(Dprice);
 				accomodation.append(view_div);
 
-				$("#searchResults").append(accomodation);
-				console.log(($("#searchResults")))
+				
+				$("#searchResults").append(accomodation); 
 			}
+		})
+		/*if (empty == "yes"){
+			no_results = document.createElement("h2");
+			no_results.innerHTML = "No accomodations found";
+			$("#searchResults").append(no_results);
 		}
-	)
+	*/
 }
 
 $("#searchRes").on('propertychange input', function(){Reses()});

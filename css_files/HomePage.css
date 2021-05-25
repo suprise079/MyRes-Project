@@ -87,6 +87,7 @@ header {
 
 /* Boxes that display each res*/
 .res_container {
+
     justify-content: center;
     height: fit-content;
     border: 10px solid  #E1DAD8;

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,16 +14,24 @@
 <body class="row">
 
 <?php require "header.php" ?>
+<?php require "../database/update_profile.php" ?>
 
 <!-- Section used to align the page well -->
 <section id="left" class="col-lg-4 col-md-4">
     <!-- Summary of profile -->
     <section id="profile_summary">
-        <img id="profile_img" src="..\pictures\RichmondChill.jpeg"></img>
-        <h2 id="res_title">Richmond</h2>
-        <div id="email_title">Richmond@mail.com</div>
-        <div id="tel_titile">011 564 7869</div>
-        <input type="button" name="edit_profile_img" value="Change profile picture" class="btn">
+        <img id="profile_img" src=<?php echo $profile_pic ?> ></img>
+        <h2 id="res_title"><?php echo $results['Res_Name'] ?></h2>
+        <div id="email_title"><?php echo $results['Email'] ?></div>
+        <div id="tel_titile"><?php echo $results['Telephone'] ?></div>
+
+        <div class="upload">
+            <input type="file" accept="image/*" name="" id="edit_file" style="opacity:5">
+
+            <input type="button" id="edit_profile" name="edit_profile_img" value="Change profile picture" class="btn">
+        </div>
+
+
     </section>
 
     <!-- Reviews section -->
@@ -36,11 +46,11 @@
     <section id="detailed_profile">
         <div class="line">
             <label>Full name</label>
-            <span id="full_name" class="view">Richmond corner</span>
+            <span id="full_name" class="view"><?php echo $results["Res_Name"] ?></span>
         </div>
         <div class="line">
             <label>Email</label>
-            <span id="email" class="view">Richmond@gmail.com</span>
+            <span id="email" class="view"><?php echo $results['Email'] ?></span>
         </div>
         <div class="line">
             <label>Password</label>
@@ -48,15 +58,15 @@
         </div>
         <div class="line">
             <label>Telephone</label>
-            <span id="phone" class="view">0820488989</span>
+            <span id="phone" class="view"><?php echo $results['Telephone'] ?></span>
         </div>
         <div class="line">
             <label>Price</label>
-            <span id="price" class="view">R3500</span>
+            <span id="price" class="view"><?php echo $results['Price_Accreditation'] ?></span>
         </div>
         <div class="line">
             <label>Campus</label>
-            <span id="campus" class="view">APB</span>
+            <span id="campus" class="view"><?php echo $results['Campus'] ?></span>
         </div>
         <div class="align_div">
             <button class="change">Edit</button>
@@ -68,30 +78,30 @@
         <script type="text/javascript">
             $("#edit_form").hide();
         </script>
-        <form>
+        <form action="profile.php" method="post">
         <div class="line">
             <label>Full name</label>
-            <input type="text" name="full_name" class="edit">
+            <input type="text" name="full_name" class="edit" id="full_name">
         </div>
         <div class="line">
             <label>Email</label>
-            <input type="text" name="email" class="edit">
+            <input type="text" name="email" class="edit" id="email">
         </div>
         <div class="line">
             <label>Password</label>
-            <input type="text" name="password" class="edit">
+            <input type="text" name="password" class="edit" id="password">
         </div>
         <div class="line">
             <label>Telephone</label>
-            <input type="text" name="telephone" class="edit">
+            <input type="text" name="tel" class="edit" id="tel">
         </div>
         <div class="line">
             <label>Price</label>
-            <input type="text" name="price" class="edit">
+            <input type="text" name="price" class="edit" id="price">
         </div>
         <div class="line">
             <label class="edit">Campus</label>
-            <select name="campus" class="edit" style="width:150px">
+            <select name="campus" class="edit" id="" style="width:150px">
                 <option>Select campus</option>
                 <option>APB</option>
                 <option>APK</option>
@@ -114,17 +124,25 @@
             <div id="pics">
                 No pictures found
             </div>
-            <input type="button" name="add_pic" value="Add Picture" class="btn">
+            <div class="upload">
+                <input type="file" accept="image/*" name="" id="add_img" style="opacity:5">
+
+                <input type="button" id="edit_profile" name="" value="Add Picture" class="btn">
+            </div>
         </section>
 
         <!-- accomodation description box -->
         <section id="description" class="col-lg-6 col-md-6">
             <h3>Description</h3>
             <hr>
-            <textarea type="text" id="res_description">This is all about your accodation
+            <form action="profile.php" method="post">
+            <textarea type="text" id="res_description" name="description"><?php echo $results['Description'] ?>
             </textarea>
-            <input type="button" id="update_des" value="Update" class="btn">
+            
+            <input type="submit" id="update_des" value="Update" class="btn">
+            </form>
         </section>
+
     </section>
 </section>
 
