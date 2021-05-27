@@ -16,37 +16,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Staatliches&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="..\css_files\bootstrap_css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script>
-        function text(x) {
-            if (x==0) document.getElementById("price").style.display = "block";
-            else document.getElementById("price").style.display = "none";;
-            return;
-        }
 
-        const regpassword = document.querySelector("#regpassword");
-        const confirmregpassword = document.querySelector("#confirmregpassword");
-        const errorText = document.querySelector(".error-text");
-        const btn = document.querySelector("button");
-    </script>
 </head>
 <body>
-    <?php 
-    
-    echo 'Hello World';
-    
-    ?>
+   
 
     <div class = "Background-box">
+        <div class = "img-area">
+            <img src= "..\pictures\login_image.jpg" alt="MyResLogo" class = "img" >
+        </div>
+        
         <div class = "Register-box">
-            <div class = "img-area">
-                <img src= "..\pictures\login_image.jpg" alt="MyResLogo" class = "img" >
-            </div>
-    
+            
             <div class = "form">
                 <h1 id = "mainheading"> Add Residence</h1>
-                <form id = "regForm" class = "form" action = "..\database\registration.php" method = "post">
-                    <div class = "container">
+                <form id = "regform" class = "form" action = "..\database\registration_conn.php" method = "post">
+                    
 
                     
                         <h2 class = "subheading">User</h2>
@@ -54,30 +41,33 @@
                         <div class="row">
                             <!-- user details sub div ti align with bootstrap grid -->
                             <div class="col-lg-6 col-md-12">
-                                <input type = "text" placeholder = "Residence Name" class = "form-control" id = "resname" name = "name">
-                                <input type = "text" placeholder = "Email" class = "form-control" id = "email" name = "email">                                    
-                                <input type = "text" placeholder = "Telephone" class = "form-control" id = "telephone" name = "telephone">
+                                <input type = "text" placeholder = "Residence Name" class = "form-input" id = "resname" name = "Res_Name"> 
+                                <input type = "text" placeholder = "Email" class = "form-input" id = "email" name = "Email">  
+                                <div>                               
+                                    <input type = "text" placeholder = "Telephone" class = "form-input" id = "telephone" name = "Telephone">
+                                </div>   
                             </div>
                             <!-- user details sub div ti align with bootstrap grid -->
                             <div class="col-lg-6 col-md-12">
                                 <label for = "description" id = "label_description">Description of Residence</label><br>
-                                <textarea rows = "10" cols = "20" id = "description"  name = "description"></textarea>
+                                <textarea rows = "7" cols = "30" id = "description"  name = "Description"></textarea>
                             </div>
                         </div>
-                    </div>
+                    
 
-                    <div class = "container">
 
                         <h3 class = "subheading">Address</h3>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <input type = "text" placeholder = "Physical Address" class = "form-control" id = "physical_address"  name = "phyAddress">
-                                <input type = "text" placeholder = "City" class = "form-control" id = "city"  name = "city">
+                            <div class="col-lg-6 col-md-12">
+                                <input type = "text" placeholder = "Physical Address" class = "form-input" id = "physical_address"  name = "Address">
+                                <div>
+                                    <input type = "text" placeholder = "City" class = "form-input" id = "city"  name = "city">
+                                </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <label for = "campus" id = "label_campus">Nearby Campus</label>
-                                    <select id = "campus_select" name="campus">
-                                        <option value ="campus" id="campus">campus</option>
+                                    <select id = "campus_select" name="Campus">
+                                        <option value =" " id="campus">campus</option>
                                         <option value ="APB" class = "campusoptions">APB</option>
                                         <option value ="APK" class = "campusoptions">APK</option>
                                         <option value ="SWC" class = "campusoptions">SWC</option>
@@ -86,56 +76,71 @@
                             </div>
                         </div>
 
-                    </div>
                     
-                    <div class = "container">
+                    
                         
                         <h4 class = "subheading">Accomadation</h4>
+
+                        <p><i class="fa fa-question-circle" style="font-size:16px"></i> (Select applicable option below, if accomodation is not accredited select option and input amount e.g 4350) </p>
                     
                    
-                    
-                        <label for = "NsfasAccredited" id = "Nasfas_label" >Nsfas Accredited
-                            <input type = "radio"  id = "Nasfas"  name = "nsfas" value=3500 onclick="text(1)" >                
-                        </label>
-                        <label for = "NotAccredited" id = "NotAccredited_label">Not Accredited
-                            <input type = "radio"  id = "NotAccredited"  name = "nsfas" onclick="text(0)" >  
-                        </label>  
-                    
-                        <input type = "text" placeholder = "Price(R)" class = "form-control" id = "price"  name = "nsfas">
-                    
-                  
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                               
+                                <label for = "NsfasAccredited" id = "Nsfas_label" >Nsfas Accredited
+                                    <input type = "radio"  id = "Nsfas"  name = "Price_Accreditation" onclick="text(1)" >                
+                                </label>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label for = "NotAccredited" id = "NotAccredited_label">Not Accredited
+                                    <input type = "radio"  id = "NotAccredited"  name = "Price_Accreditation" onclick="text(0)" >  
+                                </label>  
+                                <div>
+                                    <input type = "text" placeholder = "Price(R)" class = "form-input" id = "price"  name = "Price_Accreditation">
+                                </div>
+                            </div>
+                        </div>
                         <label for = "Room_type" id = "label_room" >Room Type</label>
-                        <select id = "room_select" name="room">
-                            <option value ="Room_type" id="Room_type">Room Type</option>
-                            <option value ="Single" class = "roomoptions">Single</option>
-                            <option value ="Sharing" class = "roomoptions">Sharing(2-4)</option>
+                        <select id = "room_select" name="Sharing">
+                            <option value =" " id="Room_type">Room Type</option>
+                            <option value ="No" class = "roomoptions">Single</option>
+                            <option value ="Yes" class = "roomoptions">Sharing</option>
                        
                         </select>
-                    </div>
+                   
 
-                
-                    <div class = "container" id = "file_container">
                         <h5 class = "subheading">Add Images</h5>
 
-                        <!--Upload Pictures-->
-                        <input type = "file" class = "upload-box" placeholder="Add file" id = "file"  name = "file">
-                    </div>
+                        <p><i class="fa fa-question-circle" style="font-size:16px"></i> (Upload a minimum of one image of the residence)</p>
+
+                        <div class = "container" id = "file_container">
+                            <!--Upload Pictures-->
+                            <input type = "file" class = "upload-box" placeholder="Add file" id = "file"  name = "file">
+                        </div>
 
 
-                    <div>
-                    <div class = "error-text" >Confirmed Password not Matched </div>
-                        <input type = "text" placeholder = "Password" class = "form-control" id = "regpassword"name = "regpassword">
-                        <input type = "text" placeholder = "Confirm Password" class = "form-control" id = "confirmregpassword"name = "confirmregpassword">
-                            <span id = "password_show" >SHOW</span> 
-                        <button id = "verify" disabled>Verify</button> 
-                    </div>
+                        
+                        <p><i class="fa fa-question-circle" style="font-size:16px"></i> (Enter a password for your MyRes profile with more than six characters and verify password )</p>
+                        
+                        <div class = "error-text" ></div>
+                            <div>
+                                <input onkeyup = "active()" type = "password" placeholder = "Password" class = "form-input" id = "regpassword"name = "regpassword">
+                            </div>
+                            <div>
+                                <input onkeyup = "active_2()" disabled type = "password" placeholder = "Confirm Password" class = "form-input" id = "confirmregpassword"name = "User_Password">
+                                <div class = "show">
+                                    SHOW
+                                </div>
+                            </div> 
+                            <button id = "verify" disabled>Verify</button> 
+                        
 
-                    <div class = "regbox">
-                        <button type = "submit" name = "submit" class = "Register">REGISTER</button>
-                         
-                    </div> 
+                        <div class = "regbox">
+                            <button type = "submit" name = "submit" class = "Register">REGISTER</button>
+                            
+                        </div> 
 
-                    <input type = checkbox id = "show">
+                        
                     
 
 
@@ -171,6 +176,71 @@
        <br>
        <P class="grouped_items" style="color: white"><img src="..\Icons\copyright.png" alt="Copyright" width = "20px" height = "20px" >  2021 MyRes. All Rights Reserved </P>
   </footer>
+
+
+
+  <script>
+    function text(x) {
+        if (x==0) document.getElementById("price").style.display = "block";
+        else document.getElementById("price").style.display = "none";;
+        return;
+    }
+
+    const regpassword = document.querySelector("#regpassword");
+    const confirmregpassword = document.querySelector("#confirmregpassword");
+    const errorText = document.querySelector(".error-text");
+    const shwBtn = document.querySelector("show");
+    const btn = document.querySelector("#verify");
+
+    function active(){
+        if (regpassword.value.length >= 6){
+            btn.removeAttribute("disabled","");
+            btn.classList.add("active");
+            confirmregpassword.removeAttribute("disabled", "");
+
+        }else{
+            btn.setAttribute("disabled", "")
+            btn.classList.remove("active");
+            confirmregpassword.removeAttribute("disabled", "");
+        }
+
+        btn.onclick = function(){
+            if (regpassword.value != confirmregpassword.value){
+                errorText.style.display = "block";
+                errorText.classList.remove(".matched");
+                errorText.textContent = "Error! Confirmed password not matched";
+                return false;
+            }else{
+                errorText.style.display = "block";
+                errorText.classList.add(".matched");
+                errorText.textContent = "Nice! password matched";
+                return false;
+            }
+        }
+
+        function active_2() {
+            if(confirmregpassword.value != "") {
+                showBtn.style.display = "block";
+                showBtn.onclick = function(){
+                    if ((regpassword.type == "password") && (confirmregpassword.type == "password")){
+                        regpassword.type = "text";
+                        confirmregpassword.type = "text";
+                        this.textContent = "Hide";
+                        this.classList.add("active");
+                    }else {
+                        regpassword.type = "password";
+                        confirmregpassword.type = "password";
+                        this.textContent = "Show";
+                        this.classList.remove("active");
+
+                    } 
+                }
+            }else{
+                showBtn.style.display = "none";
+            }
+        }
+    }
+</script>
 
     
             

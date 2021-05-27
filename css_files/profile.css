@@ -6,6 +6,43 @@ body {
     padding: 10px;
 }
 
+#denied_img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+}
+
+#denied_msg {
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    position: fixed;
+    top: 1%;
+    left: 25%;
+    background-color: grey;
+    padding: 2%;
+
+}
+
+#return_home {
+  text-decoration: none;
+  background-color: #0ea7a6;
+  padding: 7px;
+  color: black;
+  border-radius: 5px;
+}
+
+#signIn {
+    text-decoration: none;
+  background-color: #48ad2f;
+  padding: 7px;
+  color: black;
+  border-radius: 5px;
+  position:relative;
+  left: 70%;
+}
+
 #profile_summary {
     justify-content: center;
     text-align: center;
@@ -27,6 +64,10 @@ body {
     text-decoration: none;
     border: none;
     border-radius: 5px;
+}
+
+btn:hover{
+  
 }
 
 #reviews {
@@ -64,7 +105,59 @@ div label {
 }
 
 .align_div {
-    text-align: center;
+    position: relative;
+}
+
+#delete {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20%;
+    height: 35px;
+    background-color: #e64848;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#delete:hover{
+  background-color: red;
+  transitions: 4s;
+  transform: scale(1.1);
+}
+
+#pictures {
+  background-color: grey;
+  margin: 
+}
+
+.pictures{
+  width: 40%;
+  padding: 3px;
+  margin: 10px;
+  position: relative;
+}
+
+.trash {
+  background-color: #ef3c3c;
+  float: right;
+  border: 2px solid black;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  border: none;
+  border-radius: 90px;
+}
+
+.trash:hover{
+  transitions: 2s;
+  background-color: red;
+  transform: scale(1.1);
+}
+
+.imgs{
+  width: 100%;
+  border-radius: 10px;
 }
 
 .change {
@@ -76,17 +169,12 @@ div label {
     border-radius: 10px
 }
 
-#pictures {
-    background-color: grey;
-    padding: 10px;
-    border-left: 10px solid #E1DAD8;
-    border-top: 5px solid #E1DAD8;
-    height: fit-content;
-}
 
 #pics {
     margin-bottom: 20px;
 }
+
+
 
 #description {
     background-color: grey;

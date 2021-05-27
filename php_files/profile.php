@@ -10,23 +10,51 @@
     <script type="text/javascript" src="..\JavaScript_files\jquery.js"></script>
     <!-- main css for the page -->
     <link rel="stylesheet" type="text/css" href="..\css_files\profile.css">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awsome CDN -->
+    <script src="https://kit.fontawesome.com/e005c8a2fd.js"></script>
 </head>
 <body class="row">
 
-<?php require "header.php" ?>
-<?php require "../database/update_profile.php" ?>
+<!-- only allows users to profile page when signed in -->
+<?php if (false) {?>
+<div id="denied_img"><img src="../pictures/access_denied.jpg" style="width: 100%; height: 100%;"></div>
+<div id="denied_msg">
+    <p>You are currently unauthorized to enter this page. Please log in with your accomodation details to access to contents of this page</p>
+    <hr>
+    <a href="" id="return_home">Return Home</a>
+    <a href="" id="signIn">Sing In</a>
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</div>
+<?php }else{ ?>
+
+<?php 
+$mainID = $_GET['ID'];
+$_SESSION['ID'] = $mainID;
+require "header.php";
+require "../database/update_profile.php" ;
+?>
+<span id="session_id" style="opacity: 0; position: absolute;"><?php echo $mainID ?></span>
+
 
 <!-- Section used to align the page well -->
 <section id="left" class="col-lg-4 col-md-4">
     <!-- Summary of profile -->
     <section id="profile_summary">
-        <img id="profile_img" src=<?php echo $profile_pic ?> ></img>
+        <img id="profile_img" src=<?php echo "".$profile_pic."" ?> ></img>
         <h2 id="res_title"><?php echo $results['Res_Name'] ?></h2>
         <div id="email_title"><?php echo $results['Email'] ?></div>
-        <div id="tel_titile"><?php echo $results['Telephone'] ?></div>
+        <div id="tel_titile"><?php echo "0".$results['Telephone'] ?></div>
+
 
         <div class="upload">
-            <input type="file" accept="image/*" name="" id="edit_file" style="opacity:5">
+            <input type="file" accept="image/*" id="edit_file" style="opacity:5" name=<?php echo $mainID; ?>>
 
             <input type="button" id="edit_profile" name="edit_profile_img" value="Change profile picture" class="btn">
         </div>
@@ -35,9 +63,24 @@
     </section>
 
     <!-- Reviews section -->
+    <?php require "../database/review.php" ?>
     <section id="reviews">
         <h3>Reviews</h3>
-        <div>No reviews found</div>
+        <!-- Display Reviews -->
+        <div class="row">
+            <div class="col-md-12"> 
+            <?php
+                while($db_review= mysqli_fetch_array($review)){
+            ?>
+            <h4><?=$db_review['rating'];?> <i class="fa fa-star" data-rating="2" style="font-size:20px;color:green;"></i> by <span style="font-size:14px;"><?=$db_review['email'];?></span></h4>
+            <p><?=$db_review['remark'];?></p>
+            <hr>
+            <?php   
+                }
+                    
+            ?>
+            </div>
+        </div>
     </section>
 </section>
 
@@ -58,7 +101,7 @@
         </div>
         <div class="line">
             <label>Telephone</label>
-            <span id="phone" class="view"><?php echo $results['Telephone'] ?></span>
+            <span id="phone" class="view"><?php echo "0".$results['Telephone'] ?></span>
         </div>
         <div class="line">
             <label>Price</label>
@@ -70,6 +113,8 @@
         </div>
         <div class="align_div">
             <button class="change">Edit</button>
+
+            <button id="delete" class="delete" name="delete">Delete</button> 
         </div>
     </section>
 
@@ -78,7 +123,8 @@
         <script type="text/javascript">
             $("#edit_form").hide();
         </script>
-        <form action="profile.php" method="post">
+        <?php $link =  "profile.php?ID=".$mainID ?>
+        <form method="post" action=<?php echo $link; ?> >
         <div class="line">
             <label>Full name</label>
             <input type="text" name="full_name" class="edit" id="full_name">
@@ -121,13 +167,24 @@
         <section id="pictures" class="col-lg-6 col-md-6">
             <h3>Gallery</h3>
             <hr>
-            <div id="pics">
-                No pictures found
+            <div id="pics" class="row">
+                <?php for ($i=0; $i < count($pictures); $i++) { ?>
+
+                <?php $photo = "";
+                $btn_id = "D_".$i."_".$mainID ?>
+                <div class="pictures col-lg-6 col-md-6">
+                    <button onclick="del(this.id)" class="trash" id=<?php echo $btn_id ?> >
+                    <i class="far fa-trash-alt" id="trash"></i>
+
+                    </button>
+                    <img alt='picture' class='imgs' src=<?php echo $pictures[$i] ?> >
+                </div>
+            <?php } ?>
             </div>
             <div class="upload">
-                <input type="file" accept="image/*" name="" id="add_img" style="opacity:5">
+                <input type="file" accept="image/*" class="add_img" name="" id="add_img" style="opacity:5">
 
-                <input type="button" id="edit_profile" name="" value="Add Picture" class="btn">
+                <input type="button" name="" id="add_picture" value="Add Picture" class="btn">
             </div>
         </section>
 
@@ -138,7 +195,6 @@
             <form action="profile.php" method="post">
             <textarea type="text" id="res_description" name="description"><?php echo $results['Description'] ?>
             </textarea>
-            
             <input type="submit" id="update_des" value="Update" class="btn">
             </form>
         </section>
@@ -147,6 +203,7 @@
 </section>
 
 <?php require "Footer.php" ?>
+<?php } ?>
 
 <script type="text/javascript" src="..\JavaScript_files\profile.js"></script>
 </body>

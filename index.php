@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyRes</title>
     <!-- main CSS file for this page -->
     <link rel="stylesheet" href="css_files\HomePage.css">
+    <!-- tab imgae -->
+    <link rel="shortcut icon" href="pictures\logoNew.jpeg">
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
     <!-- Import res database -->
@@ -66,7 +69,8 @@
         <input type="text" placeholder="Minimum Price" id="minPrice" name="minPrice" class="price load">
         <input type="text" placeholder="Maximum Price" id="maxPrice" name="maxPrice" class="price load">
         <br>
-        <input type="range" min="100" max="10000" value="5000" id="priceRange" oninput="rangeInput()">
+        <input type="radio" name="nsfas" value="3500" id="nsfas" class=".nsfas load">
+        <label>NSFAS Accredited</label>
 
         <hr>
         <!-- Choosing the prefferd number of rooms -->

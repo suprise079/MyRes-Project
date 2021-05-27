@@ -11,6 +11,8 @@ $max_price = $_POST['maxPrice'];
 $rooms = $_POST['rooms'];
 $ratings = $_POST['ratings'];
 $res = $_POST['resName'];
+$nsfas = $_POST['nsfas'];
+
 
 #import sql database
 
@@ -38,11 +40,19 @@ if (!empty($res)) {
   $sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Res_Name like '%$res%'");
 
 }
+
 else{
   if (isset($campus)) {
   $sql = returnArray($sql);
 
   $sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Campus = '$campus'");
+
+}
+
+ if (!empty($nsfas)) {
+  $sql = returnArray($sql);
+
+  $sql = mysqli_query($conn, "SELECT Res_ID, Res_Name FROM accomodation WHERE Res_ID in $sql and Price_Accreditation = '3500'");
 
 }
 
@@ -113,7 +123,7 @@ $priceDisplay = sqlToArray($priceDisplay);
 $photos = array('pictures\RichmondChill.jpeg', 'pictures\RichmondEnter.jpeg', 'pictures\RichmondOutside.jpeg', 'pictures\RichmondRooms.jpg', 'pictures\RichmondStudy.jpeg');
 
 #Sample for testing resPage gallery
-$pictures = array('..\pictures\RichmondChill.jpeg', '..\pictures\RichmondEnter.jpeg', '..\pictures\RichmondOutside.jpeg', '..\pictures\RichmondRooms.jpg', '..\pictures\RichmondStudy.jpeg');
+
 
 $jquery_data[] = array($results, $nameDisplay, $roomsDisplay, $campusDisplay, $priceDisplay, $photos);
 

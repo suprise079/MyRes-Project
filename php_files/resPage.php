@@ -1,42 +1,62 @@
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<!-- Main css file sfor the page -->
-	<link rel="stylesheet" type="text/css" href="..\css_files\respage.css">
-	<!-- bootstrap css files -->
-	<link rel="stylesheet" type="text/css" href="..\css_files\Bootstrap_css\bootstrap-grid.css">
-    <!-- street view api -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!-- Font Awesome Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-</head>
-<body>
-
-<body>
- 
-	<!-- Page header -->
-	<?php require 'header.php'; 
-
+<?php
         //Connect to sql sever
         require "..\database\sql_connection.php";
         $mainID = $_GET['ID'];
 
         $sql = mysqli_query($conn, "SELECT * FROM accomodation WHERE Res_ID = '$mainID'");
         $accomodation = mysqli_fetch_array($sql);
-        /*Dictionary to translate sharing column in accomodation table*/
-        $dict = array('Yes' => 'Sharing', 'No' => 'Single')
-    ?>
 
-    <main id="main-container row"> 
+        /*Dictionary to translate sharing column in accomodation table*/
+        $dict = array('Yes' => 'Sharing', 'No' => 'Single');
+
+        $title = 'MyRes\\'. $accomodation['Res_Name'];
+    ?>  
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php echo $title; ?></title>    
+	<!-- Main css file sfor the page -->
+	<link rel="stylesheet" type="text/css" href="..\css_files\respage.css"> 
+	<!-- bootstrap css files -->
+	<link rel="stylesheet" type="text/css" href="..\css_files\Bootstrap_css\bootstrap-grid.css"> 
+    <!-- street view api -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- tab imgae -->
+    <link rel="shortcut icon" href="..\pictures\standLogo.png">
+    <!-- poppins fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+<body>
+ 
+	<nav class="row">
+        <!-- logo and naem -->
+        <div id="title" class="col-lg-3 col-md-3 row">
+            <img id="logo" src="..\pictures\standLogo.png" class="col-lg-4"></img>
+            <span class="col-lg-2" id="nav_title">MyRes</span>
+        </div>
+        <div id="nav_btns" class="col-lg-4 col-md-4">
+            <a href="#footer_div" class="nav_btn col-lg-4 col-lg-4">Contacts</a>
+            <a href="..\index.php#about_us" class="nav_btn col-lg-4 col-lg-4">About us</a>
+            <a href="..\index.php" id="nav_home" class="col-lg-4 col-md-4">Home</a>
+        </div>
+    </nav>
+
+    
+
+    <section id="des_map" class="row"> 
         
-        <div id="res-description">
-    	    <h2> <?php echo $accomodation['Res_Name'] ?> </h2>
-        	    <span> <?php echo $accomodation['Address'] ?></span><br>
-                <span> <?php echo $accomodation['Email']; ?> </span><br>
+        <div id="res-description" class="col-lg-7 col-lg-7">
+    	    <h1><?php echo $accomodation['Res_Name'] ?> </h1>
+        	    <p class='res_contacts'> <?php echo $accomodation['Address'] ?></p><br>
+                <p class='res_contacts'> <?php echo $accomodation['Email']; ?> </p><br>
+                <p class='res_contacts'> <?php echo '0'.$accomodation['Telephone']; ?> </p><br>
     	    <h3> Res Description </h3>
     	    <p> <?php echo $accomodation['Description']; ?> </p>
             <h3>Accomodation offers:</h3>
@@ -48,105 +68,74 @@
         </div>
 
         <!-- street view map -->
-        <div id="map">
-           <iframe src="https://www.google.com/maps/embed?pb=!4v1620740215845!6m8!1m7!1sfOfBMK46-gVbscWlU0ZRMg!2m2!1d-26.18361119313999!2d28.00619552354808!3f149.19291412865016!4f8.852909370330309!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div id="map" class="col-lg-4 row">
+           <iframe height="400" class="col-lg-12" style="border:0;" allowfullscreen="" loading="lazy" src=<?php echo $accomodation['maplink']; ?> ></iframe>
         </div>
-        <br>
+    </section>
+    
+    <br>
 
-        <h3 id="Gallery_heading">Gallery:</h3>
+    <!-- Import Pictures Query -->
+    <?php require "../database/update_profile.php" ?>
 
-        <!-- Display Accomodation Images -->
-        <!-- Import databes from Filters file for pictures -->
-        <?php require '..\database\Filters.php'; ?>
+    <!-- Display Accomodation Images -->
+     <section id="pics" class='row'>
+        <?php if (empty($pictures)) { ?>
+            <h3 id="no_img">No pictures found!</h3>
+        <?php } ?>
+        <?php for ($i=0; $i < count($pictures)-1; $i++) { ?>
 
-        <div id="res-pictures" class="row"> 
-            <!-- loop through all pictures in database -->
-            <?php foreach ($pictures as $picture) { ?>
+            <?php $photo = "" ?>
+            <span class="pictures col-lg-4 col-md-4">
+                <img alt='picture' class='imgs' src=<?php echo $pictures[$i] ?> >
+            </span>
+        <?php } ?>
+    </section>
 
-                <?php $photo = "<img src='$picture' alt='picture' class='imgs'>" ?>
-                <span class="pictures">
-                    <?php echo $photo; ?>
-                </span>
-            <?php } ?>
-        </div>
-        <hr style="clear: both;">
-        <br>
+    <hr style="clear: both;">
+    <br>
+
+    <?php require '../database/review.php'; ?>
+    <section class="row container">
+        <div class="col-lg-6 col-md-6" id="ratings">
+
+            <!-- Average Ratings -->
+
+            <div id='show_review'>
+                <h3>Average Rating</h3>
+                <h3 id='rate_count'><?php echo round($AVGRATE,1);?><i class="fa fa-star" data-rating="2" style="font-size:20px;color:#ff9f00;"></i></h3>
+                <p><?=$Total;?> ratings and <?=$Total_review;?> reviews</p>
+            </div>
 
 
-        <!-- ratings testing -->
-        <div class="col-md-4 rate-input">
+            <!-- Display Reviews -->
             <div>
-                <span class="fa fa-star" name="1" id="1" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
-                <span class="fa fa-star" name="1" id="2" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
-                <span class="fa fa-star" name="1" id="3" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
-                <span class="fa fa-star" name="1" id="4" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
-                <span class="fa fa-star" name="1" id="5" onmouseover="startRating(this)" startRating="starmark(this)" style="font-size:20px; cursor:pointer;"></span>
-                
-            </div><br>
-            <form action="" method="post">
-                <input type="hidden" name="rateID" id="rateID" value="1">
-                <input type="text" name="email" id="email" placeholder="Email"><br><br>
-                <textarea rows="5" placeholder="Enter review here..." name="comment" id="comment" required=""></textarea><br>
-                <button name="submit" id="submit">Submit</button>
-
-            </form>
-
-        </div>
-
-
-
-
-
-
-
-        <!--Review section
-        <div id="reviews-container">  
-            
-            <h2>Reviews</h2>
-
-
-            Write review button
-			<button id="writeReview" onclick="change()">Write Review </button>
-
-
-                Review Form
-				<div id="form" class="form">
-					<hr>
-					<form id="reviewForm" name="addReview">
-
-						<label>Enter name</label><br>
-						<input type="text" id="name" name="name"><br><br>
-
-						<label>Enter rating</label><br>
-
-						<label>Enter email</label><br>
-						<input type="text" id="email"><br><br>
-
-						<label>Enter resident review</label><br>
-						<input type="text" id="revDes" ><br><br>
-						
-
-                        Review Submit button
-						<button id="send" type="submit" value="Send"> Submit </button>
-			
-					</form>
-
-				</div>
-
-
-                Review Output Container
-				<div id="review-results"> 
-					<hr>
-					
-				</div>
- -->
+            <hr>	
+            <?php while($db_review= mysqli_fetch_array($review)){ ?>
+                <h4><?=$db_review['rating'];?> <i class="fa fa-star" data-rating="2" ></i><span ><?=$db_review['email'];?></span></h4>
+                    <p class="user_comm"><?=$db_review['remark'];?></p>
+                <hr>
+            <?php } ?>
+            </div>
         </div>
         
-    </main>
+        <!-- Enter Rating -->
+        <div class="col-lg-6 col-lg-6" id="enter_review">
+
+            <form method="post">
+                <input type="number" class="form-control" name="rate" id="rate" placeholder="Enter Rating" min="1" max="5" required><br>
+                <input type="text" class="form-control" name="email" id="email" placeholder="Email Id" re><br><br>
+                <textarea class="form-control" rows="5" placeholder="Write your review here..." name="remark" id="remark" required></textarea><br>
+                <p><button  class="btn btn-default btn-sm btn-info" id="srr_rating" name="submit">Submit</button></p>
+            </form>
+        </div>
+    </section>
 
     <script src="../JavaScript_files/respage.js"></script>
 
-    <?php include 'Footer.php'; ?>
+    <div id="footer_div">
+        <?php include 'Footer.php'; ?>
+    </div>
 
     </body>
 </html>

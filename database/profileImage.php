@@ -2,13 +2,12 @@
 require 'sql_connection.php';
 session_start();
 
-$_SESSION["Id"] = "2";
 
-$db_id=$_SESSION["Id"];
-
+$mainID=$_SESSION["ID"];
 
 
-$sql = "SELECT * FROM accomodation WHERE Res_ID='$db_id'";
+
+$sql = "SELECT * FROM accomodation WHERE Res_ID='$mainID'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
@@ -21,9 +20,9 @@ if (mysqli_num_rows($result) > 0) {
 $size=sizeof(explode(".", $_FILES['file']['name']));
 $extension=explode(".", $_FILES['file']['name'])[$size-1];
 
-$picture_id=trim("../images/".md5(sha1(($db_id.uniqid()))).uniqid().".".$extension);
+$picture_id=trim("../images/".md5(sha1(($mainID.uniqid()))).uniqid().".".$extension);
 
-$sql ="UPDATE accomodation SET picture_id = '$picture_id' WHERE Res_ID = $db_id";
+$sql ="UPDATE accomodation SET picture_id = '$picture_id' WHERE Res_ID = $mainID";
 mysqli_query($conn, $sql);
 
 $current = file_get_contents($_FILES['file']['tmp_name']);

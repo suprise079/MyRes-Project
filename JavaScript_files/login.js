@@ -69,7 +69,8 @@ $("#submit").click(function(){
 			console.log(data);
 			results = JSON.parse(data);
 			if (results[0].pass_checked){
-				window.location.href = ("./php_files/profile.php");
+				link = "./php_files/profile.php?ID="+results[0].Id
+				window.location.href = (link);
 			}
 			else{
 				$("#errors").empty().append("Incorrect password entered");
