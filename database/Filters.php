@@ -120,12 +120,12 @@ $priceDisplay = mysqli_query($conn, "SELECT Price_Accreditation FROM accomodatio
 $priceDisplay = sqlToArray($priceDisplay);
 
 #Hard coded data for testing homePage profiles
-$photos = array('pictures\RichmondChill.jpeg', 'pictures\RichmondEnter.jpeg', 'pictures\RichmondOutside.jpeg', 'pictures\RichmondRooms.jpg', 'pictures\RichmondStudy.jpeg');
-
+$pictureDisplay = mysqli_query($conn, "SELECT picture_id FROM accomodation WHERE Res_ID in $sql");
+$pictureDisplay = sqlToArray($pictureDisplay);
 #Sample for testing resPage gallery
 
 
-$jquery_data[] = array($results, $nameDisplay, $roomsDisplay, $campusDisplay, $priceDisplay, $photos);
+$jquery_data[] = array($results, $nameDisplay, $roomsDisplay, $campusDisplay, $priceDisplay, $pictureDisplay);
 
 echo json_encode($jquery_data);
 

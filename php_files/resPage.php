@@ -1,21 +1,10 @@
-<?php
-        //Connect to sql sever
-        require "..\database\sql_connection.php";
-        $mainID = $_GET['ID'];
 
-        $sql = mysqli_query($conn, "SELECT * FROM accomodation WHERE Res_ID = '$mainID'");
-        $accomodation = mysqli_fetch_array($sql);
-
-        /*Dictionary to translate sharing column in accomodation table*/
-        $dict = array('Yes' => 'Sharing', 'No' => 'Single');
-
-        $title = 'MyRes\\'. $accomodation['Res_Name'];
-    ?>  
+.
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $title; ?></title>    
+	<title></title>
 	<!-- Main css file sfor the page -->
 	<link rel="stylesheet" type="text/css" href="..\css_files\respage.css"> 
 	<!-- bootstrap css files -->
@@ -24,39 +13,33 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
     <!-- Font Awesome Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- tab imgae -->
-    <link rel="shortcut icon" href="..\pictures\standLogo.png">
-    <!-- poppins fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
 </head>
 <body>
 
 <body>
  
-	<nav class="row">
-        <!-- logo and naem -->
-        <div id="title" class="col-lg-3 col-md-3 row">
-            <img id="logo" src="..\pictures\standLogo.png" class="col-lg-4"></img>
-            <span class="col-lg-2" id="nav_title">MyRes</span>
-        </div>
-        <div id="nav_btns" class="col-lg-4 col-md-4">
-            <a href="#footer_div" class="nav_btn col-lg-4 col-lg-4">Contacts</a>
-            <a href="..\index.php#about_us" class="nav_btn col-lg-4 col-lg-4">About us</a>
-            <a href="..\index.php" id="nav_home" class="col-lg-4 col-md-4">Home</a>
-        </div>
-    </nav>
+	<!-- Page header -->
+	<?php require 'header.php'; 
 
-    
+        //Connect to sql sever
+        require "..\database\sql_connection.php";
+        $mainID = $_GET['ID'];
 
-    <section id="des_map" class="row"> 
+        $sql = mysqli_query($conn, "SELECT * FROM accomodation WHERE Res_ID = '$mainID'");
+        $accomodation = mysqli_fetch_array($sql);
+
+        /*Dictionary to translate sharing column in accomodation table*/
+        $dict = array('Yes' => 'Sharing', 'No' => 'Single')
+    ?>  
+
+    <main id="main-container row"> 
         
-        <div id="res-description" class="col-lg-7 col-lg-7">
-    	    <h1><?php echo $accomodation['Res_Name'] ?> </h1>
-        	    <p class='res_contacts'> <?php echo $accomodation['Address'] ?></p><br>
-                <p class='res_contacts'> <?php echo $accomodation['Email']; ?> </p><br>
-                <p class='res_contacts'> <?php echo '0'.$accomodation['Telephone']; ?> </p><br>
+        <div id="res-description">
+    	    <h2> <?php echo $accomodation['Res_Name'] ?> </h2>
+        	    <span> <?php echo $accomodation['Address'] ?></span><br>
+                <span> <?php echo $accomodation['Email']; ?> </span><br>
+                <span> <?php echo '0'.$accomodation['Telephone']; ?> </span><br>
     	    <h3> Res Description </h3>
     	    <p> <?php echo $accomodation['Description']; ?> </p>
             <h3>Accomodation offers:</h3>
@@ -68,74 +51,85 @@
         </div>
 
         <!-- street view map -->
-        <div id="map" class="col-lg-4 row">
-           <iframe height="400" class="col-lg-12" style="border:0;" allowfullscreen="" loading="lazy" src=<?php echo $accomodation['maplink']; ?> ></iframe>
+        <div id="map">
+           <iframe src=<?php echo $accomodation['maplink']; ?> width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
-    
-    <br>
+        <br>
 
-    <!-- Import Pictures Query -->
-    <?php require "../database/update_profile.php" ?>
+        <h3 id="Gallery_heading">Gallery:</h3>
 
-    <!-- Display Accomodation Images -->
-     <section id="pics" class='row'>
-        <?php if (empty($pictures)) { ?>
-            <h3 id="no_img">No pictures found!</h3>
-        <?php } ?>
-        <?php for ($i=0; $i < count($pictures)-1; $i++) { ?>
+        <!-- Import Pictures Query -->
+        <?php require "../database/update_profile.php" ?>
 
-            <?php $photo = "" ?>
-            <span class="pictures col-lg-4 col-md-4">
-                <img alt='picture' class='imgs' src=<?php echo $pictures[$i] ?> >
-            </span>
-        <?php } ?>
-    </section>
-
-    <hr style="clear: both;">
-    <br>
-
-    <?php require '../database/review.php'; ?>
-    <section class="row container">
-        <div class="col-lg-6 col-md-6" id="ratings">
-
-            <!-- Average Ratings -->
-
-            <div id='show_review'>
-                <h3>Average Rating</h3>
-                <h3 id='rate_count'><?php echo round($AVGRATE,1);?><i class="fa fa-star" data-rating="2" style="font-size:20px;color:#ff9f00;"></i></h3>
-                <p><?=$Total;?> ratings and <?=$Total_review;?> reviews</p>
-            </div>
-
-
-            <!-- Display Reviews -->
-            <div>
-            <hr>	
-            <?php while($db_review= mysqli_fetch_array($review)){ ?>
-                <h4><?=$db_review['rating'];?> <i class="fa fa-star" data-rating="2" ></i><span ><?=$db_review['email'];?></span></h4>
-                    <p class="user_comm"><?=$db_review['remark'];?></p>
-                <hr>
+        <!-- Display Accomodation Images -->
+         <div id="pics">
+            <?php if (empty($pictures)) { ?>
+                <h4 id="no_img">No pictures found!</h4>
             <?php } ?>
-            </div>
-        </div>
-        
-        <!-- Enter Rating -->
-        <div class="col-lg-6 col-lg-6" id="enter_review">
+            <?php for ($i=0; $i < count($pictures)-1; $i++) { ?>
 
-            <form method="post">
+                <?php $photo = "" ?>
+                <span class="pictures">
+                    <img alt='picture' class='imgs' src=<?php echo $pictures[$i] ?> >
+                </span>
+            <?php } ?>
+        </div>
+        <hr style="clear: both;">
+        <br>
+
+        <?php require '../database/review.php'; ?>
+        <div class="row container">
+            <div class="col-md-4 ">
+                <h3><b>Rating & Reviews</b></h3>
+                <div class="row">
+
+                    <!-- Average Ratings -->
+                    <div class="col-md-6">
+                        <h3 align="center"><b><?php echo round($AVGRATE,1);?></b> <i class="fa fa-star" data-rating="2" style="font-size:20px;color:#ff9f00;"></i></h3>
+                        <p><?=$Total;?> ratings and <?=$Total_review;?> reviews</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Display Reviews -->
+                <div class="row">
+                    <div class="col-md-12">	
+                    <?php
+                        while($db_review= mysqli_fetch_array($review)){
+                    ?>
+                            <h4><?=$db_review['rating'];?> <i class="fa fa-star" data-rating="2" style="font-size:20px;color:green;"></i> by <span style="font-size:14px;"><?=$db_review['email'];?></span></h4>
+                            <p><?=$db_review['remark'];?></p>
+                            <hr>
+                    <?php	
+                        }
+                            
+                    ?>
+                    </div>
+                </div>
+
+            </div>
+        </div><br>
+
+        <form method="post">
+            
+            <!-- Enter Rating -->
+
+            <div class="col-md-4">
                 <input type="number" class="form-control" name="rate" id="rate" placeholder="Enter Rating" min="1" max="5" required><br>
-                <input type="text" class="form-control" name="email" id="email" placeholder="Email Id" re><br><br>
+                <input type="text" class="form-control" style="margin-bottom: 10px; margin-top: 10px" name="email" id="email" placeholder="Email Id" re><br><br>
                 <textarea class="form-control" rows="5" placeholder="Write your review here..." name="remark" id="remark" required></textarea><br>
                 <p><button  class="btn btn-default btn-sm btn-info" id="srr_rating" name="submit">Submit</button></p>
-            </form>
-        </div>
-    </section>
+            </div>
+        </form>
+
+
+        
+    </main>
 
     <script src="../JavaScript_files/respage.js"></script>
 
-    <div id="footer_div">
-        <?php include 'Footer.php'; ?>
-    </div>
+    <?php include 'Footer.php'; ?>
 
     </body>
 </html>

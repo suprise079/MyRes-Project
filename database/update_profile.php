@@ -43,7 +43,7 @@ if (!empty($description)){
 }
 
 
-$sql = mysqli_query($conn, "SELECT Res_Name, Address, Campus, Price_Accreditation, Sharing, Email, Telephone, Description, picture_id FROM accomodation WHERE Res_ID = '$mainID'") or die("Not running".mysqli_error($conn));
+$sql = mysqli_query($conn, "SELECT * FROM accomodation WHERE Res_ID = '$mainID'") or die("Not running".mysqli_error($conn));
 
 $results = mysqli_fetch_assoc($sql);
 

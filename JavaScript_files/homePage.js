@@ -39,7 +39,9 @@ function Reses(){
 				/* create and place photo for the specific res*/
 				photo = document.createElement('img');
 				photo.className = 'displayPic';
-				photo.setAttribute('src', results[0][5][0]);
+				path = results[0][5][i].split('/');
+				pic = 'images/'+path[2]
+				photo.setAttribute('src', pic);
 
 				/* create information divs*/
 				Dname = make(results[0][1][i], 'res_title', 'div')

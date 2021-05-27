@@ -1,4 +1,4 @@
-<?php error_reporting(0); ?>
+<?php error_reporting(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,11 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyRes</title>
     <!-- main CSS file for this page -->
     <link rel="stylesheet" href="css_files\HomePage.css">
-    <!-- tab imgae -->
-    <link rel="shortcut icon" href="pictures\logoNew.jpeg">
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css_files\Bootstrap_css\bootstrap.min.css">
     <!-- Import res database -->

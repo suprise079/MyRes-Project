@@ -192,7 +192,7 @@ require "../database/update_profile.php" ;
         <section id="description" class="col-lg-6 col-md-6">
             <h3>Description</h3>
             <hr>
-            <form action="profile.php" method="post">
+            <form  method="post" action=<?php echo $link; ?>>
             <textarea type="text" id="res_description" name="description"><?php echo $results['Description'] ?>
             </textarea>
             <input type="submit" id="update_des" value="Update" class="btn">
